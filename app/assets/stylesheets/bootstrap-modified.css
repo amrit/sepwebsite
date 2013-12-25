@@ -313,13 +313,19 @@
   margin-top: 100px;
   padding-top: 50px;
 }
-
+.page-about {
+  background: url(/assets/brotherblur.png) no-repeat 50% 0;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
 /* line 275, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-about .about-items .item {
   position: relative;
   display: inline-block;
-  color: #fff;
   overflow: hidden;
+  background: url(../images/css/divider_q.png) no-repeat 50% 0;
+
 }
 
 /* line 282, ../../app/assets/stylesheets/bootstrap.css.scss */
