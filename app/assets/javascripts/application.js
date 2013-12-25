@@ -22,6 +22,4 @@
 //= require jquery.parallax-1.1.3
 //= require jquery.responsivevideos
 //= require jquery.scrollTo-1.4.3.1
-//= require jquery.tweet
-//= require jquery.tweetCarousel
 //= require static_pages
