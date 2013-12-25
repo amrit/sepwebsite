@@ -103,7 +103,7 @@
         <!-- Article -->
         <article>
             <ul class="thumbnails about-items">
-            	<% 10.times do %> 
+            	<% for brother in @brothers do %> 
                 <li class="span4 center">
                     <div class="item">
                     	<%= image_tag("amrit.png", class: "img-circle") %>
@@ -111,12 +111,12 @@
                     
                     <!-- Team member name and function -->
                     <h5>
-                        Amrit Ayalur<br/>
+                        <%= brother.name %> <br/>
                         <small>Epsilon Class</small>
                     </h5>
                     
                 </li>
-              <% end %> 
+ 							<% end %> 
             </ul>
         </article>
         <!-- End Article -->
