@@ -335,6 +335,11 @@
 */
 }
 
+ul.about-items li {
+  margin-left: 9px;
+  text-align: center;
+}
+
 /* line 282, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-about .about-items .item:hover .about-overlay {
   opacity: .95;
@@ -388,11 +393,12 @@
 }
 
 .page-rush {
-  background: url(/assets/rush.png) 50% 0 no-repeat fixed;
+  //background: url(/assets/rush.png) 50% 0 no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-color: #1D2025;
   color: #fff;
 }
 
