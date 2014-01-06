@@ -268,7 +268,7 @@
 /* line 231, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-events {
   position: relative;
-  background: url(/assets/event.png) 50% 0 no-repeat fixed;
+  background-color: #1D2025;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -2638,6 +2638,7 @@ blockquote small:before {
 .page-events .thumbnails img {
   height: 250px;
   width: 250px;
+  border:3px solid #fff;
 } 
 
 .page-events .thumbnails li {
