@@ -1,44 +1,38 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-
-
-Brother.create(:name => 'Akhil Katta', :pledge_class => "Epsilon")
-Brother.create(:name => 'Alan Do', :pledge_class => "Delta")
-Brother.create(:name => 'Alex Akiyama', :pledge_class => "Gamma")
-Brother.create(:name => 'Alyssa Wee', :pledge_class => "Gamma")
-Brother.create(:name => 'Amrit Ayalur', :pledge_class => "Epsilon")
-Brother.create(:name => 'Anant Agarwal', :pledge_class => "Gamma")
-Brother.create(:name => 'Andy Zhang', :pledge_class => "Founding")
-Brother.create(:name => 'Beau Dallas', :pledge_class => "Delta")
-Brother.create(:name => 'Bryan Sieber', :pledge_class => "Delta")
-Brother.create(:name => 'Bryan Tang', :pledge_class => "Epsilon")
-Brother.create(:name => 'Claire Lei', :pledge_class => "Epsilon")
-Brother.create(:name => 'Douglas Boyle', :pledge_class => "Epsilon")
-Brother.create(:name => 'Eugenia Kang', :pledge_class => "Beta")
-Brother.create(:name => 'Glenn Lee', :pledge_class => "Epsilon")
-Brother.create(:name => 'Grace Chen', :pledge_class => "Gamma")
-Brother.create(:name => 'Jasmine Stoy', :pledge_class => "Gamma")
-Brother.create(:name => 'John Lee', :pledge_class => "Gamma")
-Brother.create(:name => 'Justin Jiang', :pledge_class => "Epsilon")
-Brother.create(:name => 'Justin Kang', :pledge_class => "Epsilon")
-Brother.create(:name => 'Kenneth Le', :pledge_class => "Epsilon")
-Brother.create(:name => 'Kirtan Upadhyaya', :pledge_class => "Alpha")
-Brother.create(:name => 'Lanssie Ma', :pledge_class => "Beta")
-Brother.create(:name => 'Mane Chakarian', :pledge_class => "Delta")
-Brother.create(:name => 'Mauricio Baiocco', :pledge_class => "Delta")
-Brother.create(:name => 'Michael McDonnell', :pledge_class => "Beta")
-Brother.create(:name => 'Michael Perez', :pledge_class => "Delta")
-Brother.create(:name => 'Prashan Dharmasena', :pledge_class => "Epsilon")
-Brother.create(:name => 'Richard Zhang', :pledge_class => "Founding")
-Brother.create(:name => 'Ryan Chun', :pledge_class => "Delta")
-Brother.create(:name => 'Sherry Chen', :pledge_class => "Epsilon")
-Brother.create(:name => 'Shun Yao', :pledge_class => "Gamma")
-Brother.create(:name => 'Sorcha Evenhouse', :pledge_class => "Founding")
-Brother.create(:name => 'Tom Yet', :pledge_class => "Gamma")
-Brother.create(:name => 'Tricia Seow', :pledge_class => "Delta")
-Brother.create(:name => 'Yash Desai', :pledge_class => "Epsilon")
+Brother.create!([
+  {name: "Akhil Katta", pledge_class: "Epsilon", avatar_file_name: "Akhil-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 522405, avatar_updated_at: "2014-01-09 00:51:26", status: nil},
+  {name: "Alan Do", pledge_class: "Delta", avatar_file_name: "Alan-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 570899, avatar_updated_at: "2014-01-09 00:52:05", status: nil},
+  {name: "Alex Akiyama", pledge_class: "Gamma", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Alyssa Wee", pledge_class: "Gamma", avatar_file_name: "Alyssa-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 759181, avatar_updated_at: "2014-01-09 00:53:47", status: nil},
+  {name: "Amrit Ayalur", pledge_class: "Epsilon", avatar_file_name: "Amrit-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 548554, avatar_updated_at: "2014-01-09 00:54:29", status: nil},
+  {name: "Anant Agarwal", pledge_class: "Gamma", avatar_file_name: "Anant-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 514278, avatar_updated_at: "2014-01-09 00:54:57", status: nil},
+  {name: "Andy Zhang", pledge_class: "Founding", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Beau Dallas", pledge_class: "Delta", avatar_file_name: "Beau-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 597325, avatar_updated_at: "2014-01-09 00:55:22", status: nil},
+  {name: "Bryan Sieber", pledge_class: "Delta", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Bryan Tang", pledge_class: "Epsilon", avatar_file_name: "Bryan-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 464628, avatar_updated_at: "2014-01-09 00:55:45", status: nil},
+  {name: "Claire Lei", pledge_class: "Epsilon", avatar_file_name: "Claire-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 623343, avatar_updated_at: "2014-01-09 00:56:09", status: nil},
+  {name: "Douglas Boyle", pledge_class: "Epsilon", avatar_file_name: "Doug-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 629158, avatar_updated_at: "2014-01-09 00:56:53", status: nil},
+  {name: "Eugenia Kang", pledge_class: "Beta", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Glenn Lee", pledge_class: "Epsilon", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Grace Chen", pledge_class: "Gamma", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Jasmine Stoy", pledge_class: "Gamma", avatar_file_name: "Jasmine-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 456529, avatar_updated_at: "2014-01-09 00:57:18", status: nil},
+  {name: "John Lee", pledge_class: "Gamma", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Justin Jiang", pledge_class: "Epsilon", avatar_file_name: "JJ-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 652314, avatar_updated_at: "2014-01-09 00:58:23", status: nil},
+  {name: "Justin Kang", pledge_class: "Epsilon", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Kenneth Le", pledge_class: "Epsilon", avatar_file_name: "Kenneth-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 459632, avatar_updated_at: "2014-01-09 00:59:09", status: nil},
+  {name: "Kirtan Upadhyaya", pledge_class: "Alpha", avatar_file_name: "Kirtan-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 337655, avatar_updated_at: "2014-01-09 01:00:57", status: nil},
+  {name: "Lanssie Ma", pledge_class: "Beta", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Mane Chakarian", pledge_class: "Delta", avatar_file_name: "Mane-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 802547, avatar_updated_at: "2014-01-09 01:01:23", status: nil},
+  {name: "Mauricio Baiocco", pledge_class: "Delta", avatar_file_name: "Mauricio-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 1039229, avatar_updated_at: "2014-01-09 01:03:45", status: nil},
+  {name: "Michael McDonnell", pledge_class: "Beta", avatar_file_name: "Michael-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 498773, avatar_updated_at: "2014-01-09 01:04:26", status: nil},
+  {name: "Michael Perez", pledge_class: "Delta", avatar_file_name: "Perez-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 468148, avatar_updated_at: "2014-01-09 01:05:03", status: nil},
+  {name: "Prashan Dharmasena", pledge_class: "Epsilon", avatar_file_name: "Prashan-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 681847, avatar_updated_at: "2014-01-09 01:05:43", status: nil},
+  {name: "Richard Zhang", pledge_class: "Founding", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Ryan Chun", pledge_class: "Delta", avatar_file_name: "Ryan-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 586027, avatar_updated_at: "2014-01-09 01:06:35", status: nil},
+  {name: "Sherry Chen", pledge_class: "Epsilon", avatar_file_name: "Sherry-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 473611, avatar_updated_at: "2014-01-09 01:07:39", status: nil},
+  {name: "Shun Yao", pledge_class: "Gamma", avatar_file_name: "Shun-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 519082, avatar_updated_at: "2014-01-09 01:08:07", status: nil},
+  {name: "Sorcha Evenhouse", pledge_class: "Founding", avatar_file_name: "Sorcha-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 825297, avatar_updated_at: "2014-01-09 01:08:53", status: nil},
+  {name: "Tom Yet", pledge_class: "Gamma", avatar_file_name: "Tom-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 665338, avatar_updated_at: "2014-01-09 01:09:24", status: nil},
+  {name: "Tricia Seow", pledge_class: "Delta", avatar_file_name: "Tricia-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 480671, avatar_updated_at: "2014-01-09 01:10:19", status: nil},
+  {name: "Yash Desai", pledge_class: "Epsilon", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: nil},
+  {name: "Derrick Cheng", pledge_class: "Beta", avatar_file_name: "Derrick-Square.jpg", avatar_content_type: "image/jpeg", avatar_file_size: 655445, avatar_updated_at: "2014-01-09 00:56:31", status: nil}
+])
