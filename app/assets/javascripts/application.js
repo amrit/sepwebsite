@@ -10,9 +10,8 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery-1.10.2.min.js
+//= require jquery-1.10.2.min
 //= require jquery_ujs
-//= require bootstrap.min.js
 //= require jquery.bxslider
 //= require jquery.centralized
 //= require jquery.fixedonlater
@@ -23,3 +22,5 @@
 //= require jquery.responsivevideos
 //= require jquery.scrollTo-1.4.3.1
 //= require static_pages
+//= require bootstrap.min.js
+
