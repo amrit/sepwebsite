@@ -277,6 +277,11 @@
 .page-brothers #quote-slider h4 {
     padding-bottom: 40px;
 }
+
+// .page-brothers #quote-slider h4:before {
+//     content: "\f060";
+// }
+
 .page-brothers #quote-slider .carousel-indicators {
     left: 0;
     right: 0;
@@ -299,6 +304,10 @@
     background: url(/assets/divider_q.png) no-repeat 50% 0;
     margin-top: 100px;
     padding-top: 50px;
+}
+
+.page-brothers ul{
+  margin: 0 0 0 25px;
 }
 
 
@@ -365,6 +374,10 @@
 .page-brothers h4 {
   color: #fff;
 }
+
+.page-about {
+  height: 700px;
+}
 /* line 275, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-about .about-items .item {
   position: relative;
@@ -430,6 +443,7 @@ ul.about-items li {
 .page-about .about-items .about-overlay .social-icons i {
   display: inline-block;
 }
+
 
 .page-rush {
   //background: url(/assets/rush.png) 50% 0 no-repeat fixed;
@@ -869,12 +883,12 @@ ul.about-items li {
 }
 
 /* line 663, ../../app/assets/stylesheets/bootstrap.css.scss */
-.page-clients .row-fluid {
+.page-endeavors .row-fluid {
   padding-bottom: 40px;
   padding-top: 15px;
 }
 
-.page-clients .row {
+.page-endeavors .row {
   text-align: center;
 }
 
@@ -2763,8 +2777,8 @@ blockquote small:before {
   line-height:30px;
   color:#fff;
   text-align:center;
-  background:#292929;
-  border:3px solid #fff;
+  //background:#292929;
+  //border:3px solid #fff;
   -webkit-border-radius:23px;
   -moz-border-radius:23px;
   border-radius:23px;
