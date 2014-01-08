@@ -31,6 +31,7 @@
 /* Changes the position of the indicators */
 #quote-carousel .carousel-indicators 
 {
+  visibility: hidden;
   right: 50%;
   top: auto;
   bottom: 0px;
@@ -62,8 +63,15 @@
     margin-bottom: 10px;
 }
 
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
 .item blockquote small:before{
-	content: "";
+	content: "-";
 }
 
 .item blockquote small{
