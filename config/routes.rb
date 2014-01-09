@@ -1,6 +1,8 @@
 Sepwebsite::Application.routes.draw do
 
   root to: 'static_pages#index'
+
+  resources :rush_applications
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

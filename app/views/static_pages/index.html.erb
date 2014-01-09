@@ -1,4 +1,3 @@
-<!-- START NAVIGATION -->
 <nav class="fixed-top" id="navigation">
     <div class="container">
         <div class="row-fluid">
@@ -392,12 +391,16 @@
 	  </header>
       <!-- Client logos -->
       <div class="row-fluid">
+
           <div class="span2 center">
-              <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %> 
+
+              <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %>
           </div>
+
           <!-- <div class="span2 center">
               <h5> Meerkat </h5>
           </div> -->
+
           <div class="span2 center">
               <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %> 
           </div>
@@ -409,23 +412,199 @@
   </div>
 </div>
 <!-- END PAGE | Endeavors -->
-<!-- PAGE | About -->
+<!-- PAGE | Rush -->
 <div class="pages page-rush" id="page-rush">
     <div class="container">
         <!-- Header -->
         <header>
             <h1>Rush</h1>
+            <h4 class="line-divider"></h4>    
+        </header>
+        <!-- End Header -->
+        <article>
+            <!-- Blog articles -->
+            <ul class="thumbnails">
+                <!-- Blog post -->
+                <li class="span6">
+                
+                    <h4>
+                        Meet the Chapter<br/>
+                    </h4>
+                    
+                    <ul>
+                        <li> <strong>Date:</strong> Wednesday, Feb 5th </li>
+                        <li> <strong>Location:</strong> Wheeler 315 </li>
+                        <li> <strong>Time:</strong> 7 - 9pm </li>
+                        <li> <strong>Attire:</strong> Business Casual </li>
+                    </ul>
+                </li>
+
+                <li class="span6" style="margin-left: 139px;">
+                
+                    <h4>
+                       Social Night<br/>
+                    </h4>
+                    
+                    <ul>
+                        <li> <strong>Date:</strong> Friday, Feb 7th </li>
+                        <li> <strong>Location:</strong> Caffé Strada </li>
+                        <li> <strong>Time:</strong> 7 - 9pm </li>
+                        <li> <strong>Attire:</strong> Campus Casual </li>
+                    </ul>
+                </li>
+
+                <li class="span6" style="float: right; margin-right: 82px;">
+                
+                    <h4>
+                       Coffee Chats <br /><small>(Invite Only)</small><br/>
+                    </h4>
+                    
+                    <ul>
+                        <li> <strong>Date:</strong> Saturday, Feb 8th - </li>
+                        <li style="margin-left: 47px;"> Monday, Feb 10th </li>
+                        <li> <strong>Attire:</strong> Campus Casual </li>
+                    </ul>
+                </li>
+
+            </ul>
+            <ul id="second-row">
+
+                <li class="span6" style="margin-left: 120px;">
+                
+                    <h4>
+                       Individual Interviews <br /><small>(By Appointment)</small><br/>
+                    </h4>
+                    
+                    <ul>
+                        <li> <strong>Date:</strong> Saturday, Feb 8th - </li>
+                        <li style="margin-left: 47px;"> Sunday, Feb 9th </li>
+                        <li> <strong>Attire:</strong> Business Professional </li>
+                    </ul>
+                </li>
+
+                <li class="span6" style="margin-left: 27px;">
+                
+                    <h4>
+                       Group Interviews <br /><small>(Invite Only)</small><br/>
+                    </h4>
+                    
+                    <ul>
+                        <li> <strong>Date:</strong> Wednesday, February 11th </li>
+                        <li> <strong>Attire:</strong> Business Professional </li>
+                    </ul>
+                </li>
+            </ul>
+        </article>
+            
+    </div>
+    <div class="rush-application">
+        <button type="submit" class="btn btn-primary"> Application </button>
+    </div>
+
+</div>
+<!-- END PAGE | Rush -->
+<!-- PAGE | CONTACT -->
+<div class="pages black-bg white page-contact" id="page-contact">
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Rush Application</h1>
             <h4 class="line-divider"></h4>
             <div class="row">
                 <div class="span8 offset2">
-                    <h3> <i> Coming Spring 2014 </i> </h3>
-                </div>
-            </div>
+                    <p>
+                        If you're interested in joining our Zeta class, please fill out the application below.
+                    </p>
 
-     
+                    <p>
+                        <u>DISCLAIMER:</u> Mandatory meetings will be held on every  ____ and ____. We emphasize attendance as a key part of pledging; therefore, please note in advance that commitment is necessary.
+                    </p> </br>
+
+                    <p> If you have any questions or concerns please contact <%= mail_to "sherry95@berkeley.edu", "Sherry Chen" %>. </p>
+
+                    <p> <strong> Application due on Thursday, February 6th by 11:59pm </strong> </p>
+
+
+                </div>
+
+            </div>
         </header>
         <!-- End Header -->
-            
+        
+        <!-- Start Article -->
+        <article>
+            <div class="row-fluid">
+                <!-- Contact form -->
+                <div class="hero-unit">
+                    <h4> Zeta Class Application </h4>
+                    <div class="accordion" id="accordion">
+                    <%= simple_form_for(new_rush_application_path, :remote => true, :html => { :data => { :url => '/rush_applications/new', :type => :json } }) do |f| %> 
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            Personal Information
+                          </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse in">
+                          <div class="accordion-inner">
+                            <%= f.input :name %> 
+                            <%= f.input :email %> 
+                            <%= f.input :phone_number %> 
+                            <%= f.input :year %> 
+                            <%= f.input :major %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            Extracurricular Information
+                          </a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :extracurriculars, as: :text %>
+                            <%= f.input :hobbies, as: :text %> 
+                            <%= f.input :why_sep, as: :text %> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                            Short Answer
+                          </a>
+                        </div>
+                        <div id="collapseThree" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :extracurriculars, as: :text %>
+                            <%= f.input :hobbies, as: :text %> 
+                            <%= f.input :why_sep, as: :text %> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                            Additional Information
+                          </a>
+                        </div>
+                        <div id="collapseFour" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :picture, as: :file %> 
+                            <%= f.input :reference, as: :select %>
+                            <%= f.button :submit, 'Submit' %>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %> 
+                    </div>
+                </div>
+                <!-- End Contact form -->
+            </div>
+        </article>
+        <!-- End Article -->
+        
     </div>
 </div>
-<!-- END PAGE | About -->
+<!-- END PAGE | CONTACT
