@@ -1,4 +1,4 @@
-<!-- NAVIGATION -->
+<!-- START NAVIGATION -->
 <nav class="fixed-top" id="navigation">
     <div class="container">
         <div class="row-fluid">
@@ -271,12 +271,12 @@
                         </div>
                     </div>
                     <!-- Carousel indicators -->
-                    <a class="carousel-control left" href="#quote-slider" data-slide="prev">
+                    <!-- <a class="carousel-control left" href="#quote-slider" data-slide="prev">
                         <i class="fa fa-arrow-left"></i>
                     </a>
                     <a class="carousel-control right" href="#quote-slider" data-slide="next">
                         <i class="fa fa-arrow-right"></i>
-                    </a>
+                    </a> -->
                     <ol class="carousel-indicators">
                         <li data-target="#quote-slider" data-slide-to="0" class="active"></li>
                         <li data-target="#quote-slider" data-slide-to="1"></li>
@@ -392,16 +392,16 @@
       <!-- Client logos -->
       <div class="row-fluid">
           <div class="span2 center">
-              <%= image_tag "caviar.png" %> 
+              <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %> 
           </div>
-          <div class="span2 center">
+          <!-- <div class="span2 center">
               <h5> Meerkat </h5>
+          </div> -->
+          <div class="span2 center">
+              <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %> 
           </div>
           <div class="span2 center">
-              <%= image_tag "freeventures.png" %> 
-          </div>
-          <div class="span2 center">
-              <%= image_tag "resolutiontube.png" %>
+              <%= link_to image_tag("resolutiontube.png"), "http://www.resolutiontube.com/" %>
           </div>
       </div>
       
