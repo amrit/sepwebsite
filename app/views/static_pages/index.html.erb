@@ -1,14 +1,3 @@
-<script>
-// When the DOM is ready, run this function
-$(document).ready(function() {
-  //Set the carousel options
-  $('#quote-carousel').carousel({
-    pause: true,
-    interval: 4000,
-  });
-});
-</script>
-
 <!-- NAVIGATION -->
 <nav class="fixed-top" id="navigation">
     <div class="container">
@@ -82,7 +71,9 @@ $(document).ready(function() {
                     </p>
                 </div>
             </div> 
-<div class="carousel slide" data-ride="carousel" id="quote-carousel">
+
+
+    <div class="carousel slide" data-ride="carousel" id="quote-carousel">
         <!-- Bottom Carousel Indicators -->
         <ol class="carousel-indicators">
           <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
@@ -92,36 +83,38 @@ $(document).ready(function() {
         
         <!-- Carousel Slides / Quotes -->
         <div class="carousel-inner">
-        
           <!-- Quote 1 -->
           <div class="item active">
+            <hr />
             <blockquote>
               <div class="row">
                 <div class="col-sm-9">
                   <p>Sigma Eta Pi is a toolbox; it enables us to build not on our next big startup, but on ourselves. SEP gave me the confidence and skill set to pursue any future venture in my life.</p>
-                  <small>Kirtan Upadhyaya, Alpha Class</small>
+                  <small><strong>Kirtan Upadhyaya, Alpha Class</strong></small>
                 </div>
               </div>
             </blockquote>
           </div>
           <!-- Quote 2 -->
           <div class="item">
+            <hr />
             <blockquote>
               <div class="row">
                 <div class="col-sm-9">
                   <p>SEP was a time of exploration, an opportunity for growth, and most importantly, a place to call home. New ways of thinking, seeing, and believing come together; the world you used to know becomes much smaller, and the world you didn't know becomes much brighter.</p>
-                  <small>Andy Yang, Founding Member</small>
+                  <small><strong>Andy Yang, Founding Member</strong></small>
                 </div>
               </div>
             </blockquote>
           </div>
           <!-- Quote 3 -->
           <div class="item">
+            <hr />
             <blockquote>
               <div class="row">
                 <div class="col-sm-9">
                   <p>Sigma Eta Pi is filled with individuals that I can confidently say are my inspiration and my family. We're a little quirky, a lot of fun, and undeniably passionate and talented. I grew immeasurably as a leader and entrepreneur and met my best friends. Hands down the best and most defining part of my college experience.</p>
-                  <small>Eric Liu, Founding Member</small>
+                  <small><strong>Eric Liu, Founding Member</strong></small>
                 </div>
               </div>
             </blockquote>
@@ -158,7 +151,7 @@ $(document).ready(function() {
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
-                            <h4><i> Founding Class </i></h4>
+                           <h4><i> Founding Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Founding" %> 
                                     <li class="span4 center">
@@ -166,10 +159,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -177,7 +171,7 @@ $(document).ready(function() {
                         </div>
 
                         <div class="item">
-                            <h3> Alpha Class </h4>
+                            <h4><i> Alpha Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Alpha" %> 
                                     <li class="span4 center">
@@ -185,10 +179,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -196,7 +191,7 @@ $(document).ready(function() {
                         </div>
                         
                         <div class="item">
-
+                            <h4><i> Beta Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Beta" %> 
                                     <li class="span4 center">
@@ -204,10 +199,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -215,6 +211,7 @@ $(document).ready(function() {
                         </div>
 
                         <div class="item">
+                            <h4><i> Gamma Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Gamma" %> 
                                     <li class="span4 center">
@@ -222,10 +219,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -233,6 +231,7 @@ $(document).ready(function() {
                         </div>
 
                         <div class="item">
+                            <h4><i> Delta Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Delta" %> 
                                     <li class="span4 center">
@@ -240,10 +239,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -251,6 +251,7 @@ $(document).ready(function() {
                         </div>
 
                         <div class="item">
+                            <h4><i> Epsilon Class </i></h4>
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Epsilon" %> 
                                     <li class="span4 center">
@@ -258,10 +259,11 @@ $(document).ready(function() {
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
-                                        <!-- Team member name and function -->
                                         <h5>
                                             <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class%>  Class</small>
+                                            <% if brother.status %>
+                                                <small> <%= brother.status %> </small>
+                                            <% end %> 
                                         </h5>
                                     </li>
                                 <% end %>
@@ -269,6 +271,12 @@ $(document).ready(function() {
                         </div>
                     </div>
                     <!-- Carousel indicators -->
+                    <a class="carousel-control left" href="#quote-slider" data-slide="prev">
+                        <i class="fa fa-arrow-left"></i>
+                    </a>
+                    <a class="carousel-control right" href="#quote-slider" data-slide="next">
+                        <i class="fa fa-arrow-right"></i>
+                    </a>
                     <ol class="carousel-indicators">
                         <li data-target="#quote-slider" data-slide-to="0" class="active"></li>
                         <li data-target="#quote-slider" data-slide-to="1"></li>
@@ -366,8 +374,8 @@ $(document).ready(function() {
     
 </div>
 
-<!-- PAGE | CLIENTS -->
-<div class="pages page-clients" id="page-endeavors">
+<!-- PAGE | Endeavors -->
+<div class="pages page-endeavors" id="page-endeavors">
 	<div class="overlay"></div>
   <div class="container">
 	  	<header>            
@@ -376,7 +384,7 @@ $(document).ready(function() {
 	    <div class="row">
 	        <div class="span8 offset2">
 	            <p>
-	                Sigma Eta Pi promotes entrepreneurship. Below are just some of the companies our brothers have started.
+	                Sigma Eta Pi encourages and fosters entrepreneurship. Below are just some of the ventures our brothers have started.
 	            </p>
 	        </div>
 	    </div>
@@ -397,10 +405,9 @@ $(document).ready(function() {
           </div>
       </div>
       
-      <!-- Short text related to client's -->
   </div>
 </div>
-    <!-- END PAGE | CLIENTS -->
+<!-- END PAGE | Endeavors -->
 <!-- PAGE | About -->
 <div class="pages page-rush" id="page-rush">
     <div class="container">

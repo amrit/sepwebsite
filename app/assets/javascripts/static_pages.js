@@ -38,10 +38,15 @@ $(document).ready(function(){
     $.fn.responsivevideos();
     
     /* Carousel "Quote slider" initialization. */
+    $('#quote-carousel').carousel({
+        pause: true,
+        interval: 10000,
+    });
+
     $('#quote-slider').each(function(){
         if($('.item', this).length) {
             $(this).carousel({
-                interval: 20000
+                interval: false
             });
         }
     });
@@ -203,3 +208,5 @@ $( document ).ajaxComplete(function() {
         return false;
     });
 });
+
+

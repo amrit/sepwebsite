@@ -62,19 +62,13 @@
     margin-bottom: 10px;
 }
 
-.item blockquote p:before {
-    content: "\f10d";
-    font-family: 'Fontawesome';
-    float: left;
-    margin-right: 10px;
-}
-
 .item blockquote small:before{
 	content: "";
 }
 
 .item blockquote small{
 	color: #292929;
+  margin-top: 30px;
 }
 
 
