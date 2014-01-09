@@ -80,6 +80,11 @@
 </div>
 <!-- END PAGE | About -->
 
+
+
+
+
+
 <!-- PAGE | BROTHERS -->
 <div class="pages page-brothers" id="page-brothers">
     <div class="container">
@@ -87,33 +92,137 @@
         <header>
             <h1>Brothers</h1>
             <h4 class="line-divider"></h4>
-            <div class="row">
-                <div class="span8 offset2">
-                    <p>
-                        Our brothers are an incredibly diverse group in all senses of the word. Learn more about them below.
-                    </p>
-                </div>
-            </div>
         </header>
         <!-- End Header -->
         
         <!-- Article -->
         <article>
             <ul class="thumbnails about-items">
-            	<% for brother in @brothers do %> 
-                <li class="span4 center">
-                    <div class="item">
-                    	<%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                <div id="quote-slider" class="slide">
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <h4><i> Founding Class </i></h4>
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Founding" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+
+                        <div class="item">
+                            <h3> Alpha Class </h4>
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Alpha" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+                        
+                        <div class="item">
+
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Beta" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+
+                        <div class="item">
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Gamma" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+
+                        <div class="item">
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Delta" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+
+                        <div class="item">
+                            <% for brother in @brothers do %> 
+                                <% if brother.pledge_class == "Epsilon" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <!-- Team member name and function -->
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class%>  Class</small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
                     </div>
-                    
-                    <!-- Team member name and function -->
-                    <h5>
-                        <%= brother.name %> <br/>
-                        <small><%= brother.pledge_class%>  Class</small>
-                    </h5>
-                    
-                </li>
- 							<% end %> 
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#quote-slider" data-slide-to="1"></li>
+                        <li data-target="#quote-slider" data-slide-to="2"></li>
+                        <li data-target="#quote-slider" data-slide-to="3"></li>
+                        <li data-target="#quote-slider" data-slide-to="4"></li>
+                        <li data-target="#quote-slider" data-slide-to="5"></li>
+
+                    </ol>
+                </div>
             </ul>
         </article>
         <!-- End Article -->
@@ -121,9 +230,7 @@
 </div>
 <!-- END PAGE | BROTHERS -->
 
-
-
-<!-- PAGE | FEATURES  -->
+<!-- PAGE | EVENTS  -->
 <div class="pages white paralax page-events" id="page-events">
     <div class="overlay"></div>
     <div class="container">
