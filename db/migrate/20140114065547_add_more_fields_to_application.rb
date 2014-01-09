@@ -8,9 +8,10 @@ class AddMoreFieldsToApplication < ActiveRecord::Migration
   	# Short Answer
   	add_column :applications, :short_answer1, :text
   	add_column :applications, :short_answer2, :text
+  	add_column :applications, :short_answer3, :text
+  	add_column :applications, :short_answer4, :text
 
   	# Additional Information
-  	add_column :applications, :picture, :attachment
   	add_column :applications, :reference, :string
 
   end

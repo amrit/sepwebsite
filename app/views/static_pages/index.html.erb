@@ -45,6 +45,8 @@
                         </div>
                     </div>                    
                     <p>UC Berkeley's Premier Entrepreneurship Fraternity</p>
+                    <div id="cursor">
+                    </div>
                 </div>
             </div>
         </div>
@@ -392,8 +394,7 @@
       <!-- Client logos -->
       <div class="row-fluid">
 
-          <div class="span2 center">
-
+          <div class="span2 center" style="margin-left: 26%;">
               <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %>
           </div>
 
@@ -404,6 +405,7 @@
           <div class="span2 center">
               <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %> 
           </div>
+
           <div class="span2 center">
               <%= link_to image_tag("resolutiontube.png"), "http://www.resolutiontube.com/" %>
           </div>
@@ -563,9 +565,9 @@
                         </div>
                         <div id="collapseTwo" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <%= f.input :extracurriculars, as: :text %>
-                            <%= f.input :hobbies, as: :text %> 
-                            <%= f.input :why_sep, as: :text %> 
+                            <%= f.input :extracurriculars,  as: :text, label: "1. What are your other commitments this semester? (List your classes, work and other extracurriculars along with the number of hours of commitment.)"  %>
+                            <%= f.input :hobbies, as: :text, label: "2. What are your hobbies? (100 words or less)" %> 
+                            <%= f.input :why_sep, as: :text, label: "3. Why do you want to be a part of SEP and what do you hope to accomplish during your time as a brother? (200 words or less)" %> 
                           </div>
                         </div>
                       </div>
@@ -577,9 +579,11 @@
                         </div>
                         <div id="collapseThree" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <%= f.input :extracurriculars, as: :text %>
-                            <%= f.input :hobbies, as: :text %> 
-                            <%= f.input :why_sep, as: :text %> 
+                            <p> Please answer two of the prompts given. (200 words or less) </p>
+                            <%= f.input :short_answer1, as: :text, label: "1. What is your passion, and how does your passion drive you?" %> 
+                            <%= f.input :short_answer2, as: :text, label: "2. Identify one problem or inefficiency that can successfully be addressed by entrepreneurial action. Specify actionable items that can be applied to the situation. There is no need to constrain yourself to business-related industries — choose a topic in which you have authentic passion." %>
+                            <%= f.input :short_answer3, as: :text, label: "3. Identify a startup that inspires you. Analyze their business model and target market." %>
+                            <%= f.input :short_answer4, as: :text, label: "4. If you had to create a startup in any country other than the United States, which would it be and why?" %>
                           </div>
                         </div>
                       </div>
@@ -592,7 +596,9 @@
                         <div id="collapseFour" class="accordion-body collapse">
                           <div class="accordion-inner">
                             <%= f.input :picture, as: :file %> 
-                            <%= f.input :reference, as: :select %>
+                            <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
+                                f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
+                            end %>  
                             <%= f.button :submit, 'Submit' %>
                           </div>
                         </div>
