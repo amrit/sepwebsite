@@ -1,5 +1,5 @@
 class Brother < ActiveRecord::Base
-  attr_accessible :name, :pledge_class, :avatar, :status
+  attr_accessible :name, :pledge_class, :avatar, :status, :avatar_file_name, :avatar_content_type, :avatar_file_size, :avatar_updated_at
 
    has_attached_file :avatar,
     :storage => :s3,
