@@ -50,6 +50,19 @@ $(document).ready(function(){
             });
         }
     });
+
+    $('#brothers-carousel').carousel({
+        pause: true,
+        interval: 10000,
+    });
+
+    $('#brothers-slider').each(function(){
+        if($('.item', this).length) {
+            $(this).carousel({
+                interval: false
+            });
+        }
+    });
     
     /* Scroll spy and scroll filter */
     $('#main-menu').onePageNav({
