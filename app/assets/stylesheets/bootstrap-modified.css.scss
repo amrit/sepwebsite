@@ -291,8 +291,8 @@
     margin-top: 30px;
 }
 .page-brothers #quote-slider .carousel-indicators li {
-    width: 8px;
-    height: 8px;
+    width: 15px;
+    height: 15px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     border-radius: 8px;
@@ -446,7 +446,7 @@ ul.about-items li {
 
 
 .page-rush {
-  //background: url(/assets/rush.png) 50% 0 no-repeat fixed;
+  background: url(/assets/chicago.png) 50% 0 no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -455,6 +455,10 @@ ul.about-items li {
   color: #fff;
 }
 
+.page-rush h4 {
+  color: #fff;
+
+}
 .page-rush .rush-items .item {
   position: relative;
   display: inline-block;
@@ -490,6 +494,44 @@ ul.about-items li {
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
+
+.page-rush {
+  padding-bottom: 210px;
+}
+
+
+.page-rush h4 {
+  font-size: 22px;
+}
+
+.page-rush .thumbnails {
+  width: 1000px;
+}
+.page-rush li {
+  text-align: left;
+  list-style: none;
+}
+
+.page-rush .span6 {
+  width: 289px;
+  margin-left: 0px;
+}
+
+.page-rush .span6 li{ 
+  padding-bottom: 10px;
+  text-align: left;
+  font-size: 16px
+}
+
+.page-rush .span6 ul {
+  margin: 0 0 13.5px 0px;
+}
+
+.page-rush #second-row .span6 {
+  width: 364px;
+  margin-top: 40px;
+}
+
 
 
 /* line 329, ../../app/assets/stylesheets/bootstrap.css.scss */
