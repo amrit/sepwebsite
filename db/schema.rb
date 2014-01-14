@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140114065547) do
+ActiveRecord::Schema.define(:version => 20140114225940) do
 
 # Could not dump table "applications" because of following StandardError
 #   Unknown type 'attachment' for column 'picture'
