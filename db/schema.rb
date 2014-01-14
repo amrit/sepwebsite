@@ -11,7 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140109012234) do
+ActiveRecord::Schema.define(:version => 20140114065547) do
+
+# Could not dump table "applications" because of following StandardError
+#   Unknown type 'attachment' for column 'picture'
 
   create_table "brothers", :force => true do |t|
     t.string   "name"

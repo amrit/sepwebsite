@@ -949,6 +949,12 @@ ul.about-items li {
   width: 100%;
 }
 
+.page-contact form input {
+  background-color: #ccc;
+  color: #666;
+  font-size: .8em;
+}
+
 /* line 632, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-contact form input[type='email'], .page-contact form input[type='text'] {
   background-color: #ccc;
@@ -1763,6 +1769,10 @@ sup {
 /* line 1328, ../../app/assets/stylesheets/bootstrap.css.scss */
 sub {
   bottom: -0.25em;
+}
+
+form {
+  margin: 0 0 27px
 }
 
 /* line 1332, ../../app/assets/stylesheets/bootstrap.css.scss */

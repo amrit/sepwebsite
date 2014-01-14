@@ -391,7 +391,7 @@
       <!-- Client logos -->
       <div class="row-fluid">
 
-          <div class="span2 center" style="margin-left: 26%;">
+          <div class="span2 center">
 
               <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %>
           </div>
@@ -507,14 +507,25 @@
     <div class="container">
         <!-- Header -->
         <header>
-            <h4 class="line-divider">Contact</h4>
-            <h1>Say hello!</h1>
+            <h1>Rush Application</h1>
+            <h4 class="line-divider"></h4>
             <div class="row">
                 <div class="span8 offset2">
                     <p>
-                        We like to create things with fun, open-minded people. Feel free to say hello! We'll respond as soon as possible.
+                        If you're interested in joining our Zeta class, please fill out the application below.
                     </p>
+
+                    <p>
+                        <u>DISCLAIMER:</u> Mandatory meetings will be held on every  ____ and ____. We emphasize attendance as a key part of pledging; therefore, please note in advance that commitment is necessary.
+                    </p> </br>
+
+                    <p> If you have any questions or concerns please contact <%= mail_to "sherry95@berkeley.edu", "Sherry Chen" %>. </p>
+
+                    <p> <strong> Application due on Thursday, February 6th by 11:59pm </strong> </p>
+
+
                 </div>
+
             </div>
         </header>
         <!-- End Header -->
@@ -523,64 +534,72 @@
         <article>
             <div class="row-fluid">
                 <!-- Contact form -->
-                <div class="span6">
-                    <h5>Drop Us A Line</h5>
-                    <form>
-                        <input type="text" class="span12" placeholder="Title" required="required">
-                        <input type="email" class="span12" placeholder="Email" required="required">
-                        <textarea rows="10" class="span12" required="required"></textarea>
-                        <button type="submit" class="btn btn-primary btn-large">Submit</button>
-                    </form>
+                <div class="hero-unit">
+                    <h4> Zeta Class Application </h4>
+                    <div class="accordion" id="accordion">
+                    <%= simple_form_for(new_rush_application_path, :remote => true, :html => { :data => { :url => '/rush_applications/new', :type => :json } }) do |f| %> 
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                            Personal Information
+                          </a>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse in">
+                          <div class="accordion-inner">
+                            <%= f.input :name %> 
+                            <%= f.input :email %> 
+                            <%= f.input :phone_number %> 
+                            <%= f.input :year %> 
+                            <%= f.input :major %>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                            Extracurricular Information
+                          </a>
+                        </div>
+                        <div id="collapseTwo" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :extracurriculars, as: :text %>
+                            <%= f.input :hobbies, as: :text %> 
+                            <%= f.input :why_sep, as: :text %> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                            Short Answer
+                          </a>
+                        </div>
+                        <div id="collapseThree" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :extracurriculars, as: :text %>
+                            <%= f.input :hobbies, as: :text %> 
+                            <%= f.input :why_sep, as: :text %> 
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-group">
+                        <div class="accordion-heading">
+                          <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseFour">
+                            Additional Information
+                          </a>
+                        </div>
+                        <div id="collapseFour" class="accordion-body collapse">
+                          <div class="accordion-inner">
+                            <%= f.input :picture, as: :file %> 
+                            <%= f.input :reference, as: :select %>
+                            <%= f.button :submit, 'Submit' %>
+                          </div>
+                        </div>
+                      </div>
+                    <% end %> 
+                    </div>
                 </div>
                 <!-- End Contact form -->
-                <!-- Contact information -->
-                <div class="span5 offset1">
-                    <h5>Meet Us</h5>
-                    <div class="media">
-                        <div class="social-icons sicon-white pull-left">
-                            <a href="#" class="sicon-phone"><i>Phone</i></a>
-                        </div> 
-                        <div class="media-body smallFontBy08">
-                            (+1) 502 964-0393 | (+1) 502 964-0393 (FAX)
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="social-icons sicon-white pull-left">
-                            <a href="#" class="sicon-place"><i>Location</i></a>
-                        </div> 
-                        <div class="media-body smallFontBy08">
-                            1095 Columbus Ave., San Francisco, CA 94133
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="social-icons sicon-white pull-left">
-                            <a href="#" class="sicon-mail"><i>email</i></a>
-                        </div> 
-                        <div class="media-body smallFontBy08">
-                            mail@crollify.com
-                        </div>
-                    </div>
-                    <div class="media">
-                        <div class="social-icons sicon-white pull-left">
-                            <a href="#" class="sicon-clock"><i>Time zone</i></a>
-                        </div> 
-                        <div class="media-body smallFontBy08">
-                            UTC / GMT -5
-                        </div>
-                    </div>
-                    <br/>
-                    <br/>
-                    <br/>
-                    <h5>Get social</h5>
-                    <div class="social-icons sicon-white bordered">
-                        <a href="#" class="sicon-facebook"><i>Facebook</i></a>
-                        <a href="#" class="sicon-twitter"><i>Twitter</i></a>
-                        <a href="#" class="sicon-linkedin"><i>LinkedIn</i></a>
-                        <a href="#" class="sicon-youtube"><i>Youtube</i></a>
-                        <a href="#" class="sicon-pinterest"><i>Pinterest</i></a>
-                    </div>
-                </div>
-                <!-- End Contact information -->
             </div>
         </article>
         <!-- End Article -->
