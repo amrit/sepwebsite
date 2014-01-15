@@ -8,6 +8,10 @@
  * Treble theme v1.0.0
  */
 /* line 9, ../../app/assets/stylesheets/bootstrap.css.scss */
+
+body {
+  display: none;
+}
 .page-welcome {
   width: 100%;
   height: 100%;
@@ -939,6 +943,23 @@ ul.about-items li {
   margin-bottom: 25px;
 }
 
+#collapseThree label {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#collapseFour label {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+#collapseFour input.submit {
+  margin-top: 25px;
+  width: 100px;
+  margin-bottom: 25px;
+}
+
+
 /* line 610, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-contact .container {
   position: relative;
@@ -1007,6 +1028,10 @@ ul.about-items li {
 /* line 659, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-contact form .media {
   padding-top: 24px;
+}
+
+#rush-application {
+  display: none;
 }
 
 /* line 663, ../../app/assets/stylesheets/bootstrap.css.scss */
@@ -2991,4 +3016,8 @@ abbr {
 
 select#_rush_applications_new_reference {
   width: 265px;
+}
+
+input.file.required {
+  background: none;
 }

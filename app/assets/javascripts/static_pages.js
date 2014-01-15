@@ -1,10 +1,16 @@
+
 $(document).ready(function(){
+    // }
     /**
     *   Global variables.
     */
     var pageHeight = $(window).height();
     var pageWidth = $(window).width();
     var navigationHeight = $("#navigation").outerHeight();
+    var images = $('img');
+    var images_nbr = images.length;
+
+    $('body').fadeIn();
     
     /**
     *   ON RESIZE, check again
@@ -33,6 +39,14 @@ $(document).ready(function(){
         delay: 1500,
         fadeSpeed: 500
     });
+
+    /* Rush Application Dropdown */
+    $('button#apply').click(function(e){
+        $('#rush-application').slideToggle();
+        $.scrollTo( '#rush-application', 800, {easing:'swing'} );
+    });
+
+
     
     /* Make embeded videos responsive. */
     $.fn.responsivevideos();
@@ -43,17 +57,17 @@ $(document).ready(function(){
         interval: 10000,
     });
 
-    $('#quote-slider').each(function(){
-        if($('.item', this).length) {
-            $(this).carousel({
-                interval: false
-            });
-        }
-    });
+    // $('#quote-slider').each(function(){
+    //     if($('.item', this).length) {
+    //         $(this).carousel({
+    //             interval: false
+    //         });
+    //     }
+    // });
 
     $('#brothers-carousel').carousel({
         pause: true,
-        interval: 10000,
+        interval: false,
     });
 
     $('#brothers-slider').each(function(){
