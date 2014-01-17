@@ -211,6 +211,10 @@ $( document ).ajaxSend( function() {
         $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
         $(".loading").slideDown();
         $(".loading .progress .bar").delay(300).css("width", "100%");
+        $('#rush-application').delay(300).slideUp(1400);
+        $('#apply').html('Thanks!');
+        $('#apply').attr('disabled','disabled');
+        $('#apply').attr('disabled','disabled');
     }
 });
 

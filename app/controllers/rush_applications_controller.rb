@@ -4,7 +4,7 @@ class RushApplicationsController < ApplicationController
 		@application = Application.new(params[:application])
 		respond_to do |format|
 	    if @application.save
-	      format.js {render :js => "$('#collapseFour input.submit').html('Thanks!');"}
+	      format.js {}
 	    end
 	  end
 	end
