@@ -52,7 +52,7 @@ Brother.create!([
   {name: "Christina Oh", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
   {name: "Heather Hui", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
   {name: "Jeffrey Yang", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
-  {name: "Katarina Du", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, statu s: "Alumnus"},
+  {name: "Katarina Du", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
   {name: "Paul Duan", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
   {name: "Perry Yee", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
   {name: "Praneet Wadge", pledge_class: "Alpha", avatar_file_name: nil, avatar_content_type: nil, avatar_file_size: nil, avatar_updated_at: nil, status: "Alumnus"},
