@@ -150,6 +150,14 @@
         <article id="brothers">
             <ul class="thumbnails about-items">
                 <div id="brothers-carousel" data-ride="carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#brothers-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#brothers-slider" data-slide-to="1"></li>
+                        <li data-target="#brothers-slider" data-slide-to="2"></li>
+                        <li data-target="#brothers-slider" data-slide-to="3"></li>
+                        <li data-target="#brothers-slider" data-slide-to="4"></li>
+                        <li data-target="#brothers-slider" data-slide-to="5"></li>
+                    </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
@@ -197,7 +205,7 @@
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Beta" %> 
                                     <li class="span4 center">
-                                        <div class="item">
+                                        <div class="item">                                        
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
@@ -279,15 +287,6 @@
                     <a class="carousel-control right" href="#brothers-carousel" data-slide="next">
                         <i class="fa fa-chevron-right"></i>
                     </a> 
-                    <ol class="carousel-indicators">
-                        <li data-target="#brothers-slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#brothers-slider" data-slide-to="1"></li>
-                        <li data-target="#brothers-slider" data-slide-to="2"></li>
-                        <li data-target="#brothers-slider" data-slide-to="3"></li>
-                        <li data-target="#brothers-slider" data-slide-to="4"></li>
-                        <li data-target="#brothers-slider" data-slide-to="5"></li>
-
-                    </ol>
                 </div>
             </ul>
         </article>

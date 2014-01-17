@@ -47,7 +47,6 @@ $(document).ready(function(){
     });
 
 
-    
     /* Make embeded videos responsive. */
     $.fn.responsivevideos();
     
@@ -78,13 +77,6 @@ $(document).ready(function(){
         }
     });
 
-    
-    var $inner = $("ul.thumbnails.about-brothers");
-    var $outer = $("article#brothers");
-    
-    if ($inner.innerHeight() > $outer.innerHeight()){
-        $outer.animate({height:$inner.innerHeight() + "px"});
-    }
     
     
     /* Scroll spy and scroll filter */
