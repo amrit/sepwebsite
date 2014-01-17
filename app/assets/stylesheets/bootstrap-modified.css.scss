@@ -42,10 +42,6 @@ body {
   -moz-transition: all .5s ease-in-out;
   -o-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
-  height: 289px;
-  position: relative;
-  width: 370px;
-  margin: 0 auto;
 }
 
 /* line 33, ../../app/assets/stylesheets/bootstrap.css.scss */
@@ -389,9 +385,6 @@ body {
   color: #fff;
 }
 
-.page-about {
-  height: 700px;
-}
 /* line 275, ../../app/assets/stylesheets/bootstrap.css.scss */
 .page-about .about-items .item {
   position: relative;
@@ -399,6 +392,15 @@ body {
   overflow: hidden;
 /*  background: url(../images/css/divider_q.png) no-repeat 50% 0;
 */
+}
+
+
+.page-about header {
+  padding-bottom: 0px;
+}
+
+.page-about .carousel-inner {
+  height: 219px;
 }
 
 ul.about-items li {
@@ -3020,4 +3022,8 @@ select#_rush_applications_new_reference {
 
 input.file.required {
   background: none;
+}
+
+.page-about header {
+  padding-bottom: 0px;
 }
