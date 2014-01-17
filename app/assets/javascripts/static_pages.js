@@ -39,7 +39,6 @@ $(document).ready(function(){
     
     /* Carousel "Quote slider" initialization. */
     $('#quote-carousel').carousel({
-        pause: true,
         interval: 10000,
     });
 
@@ -52,8 +51,7 @@ $(document).ready(function(){
     });
 
     $('#brothers-carousel').carousel({
-        pause: true,
-        interval: 10000,
+        interval: false,
     });
 
     $('#brothers-slider').each(function(){
