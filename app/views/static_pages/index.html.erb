@@ -147,9 +147,17 @@
         <!-- End Header -->
         
         <!-- Article -->
-        <article>
+        <article id="brothers">
             <ul class="thumbnails about-items">
                 <div id="brothers-carousel" data-ride="carousel" class="carousel slide">
+                    <ol class="carousel-indicators">
+                        <li data-target="#brothers-slider" data-slide-to="0" class="active"></li>
+                        <li data-target="#brothers-slider" data-slide-to="1"></li>
+                        <li data-target="#brothers-slider" data-slide-to="2"></li>
+                        <li data-target="#brothers-slider" data-slide-to="3"></li>
+                        <li data-target="#brothers-slider" data-slide-to="4"></li>
+                        <li data-target="#brothers-slider" data-slide-to="5"></li>
+                    </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
                         <div class="active item">
@@ -197,7 +205,7 @@
                             <% for brother in @brothers do %> 
                                 <% if brother.pledge_class == "Beta" %> 
                                     <li class="span4 center">
-                                        <div class="item">
+                                        <div class="item">                                        
                                             <%= image_tag(brother.avatar.url, :class => "img-circle") %>
                                         </div>
                                         
@@ -279,15 +287,6 @@
                     <a class="carousel-control right" href="#brothers-carousel" data-slide="next">
                         <i class="fa fa-chevron-right"></i>
                     </a> 
-                    <ol class="carousel-indicators">
-                        <li data-target="#brothers-slider" data-slide-to="0" class="active"></li>
-                        <li data-target="#brothers-slider" data-slide-to="1"></li>
-                        <li data-target="#brothers-slider" data-slide-to="2"></li>
-                        <li data-target="#brothers-slider" data-slide-to="3"></li>
-                        <li data-target="#brothers-slider" data-slide-to="4"></li>
-                        <li data-target="#brothers-slider" data-slide-to="5"></li>
-
-                    </ol>
                 </div>
             </ul>
         </article>
@@ -500,13 +499,14 @@
             
     </div>
     <div class="rush-application">
-        <button type="submit" class="btn btn-primary"> Application </button>
+        <button href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application </button>
+        <div class='alert alert-success'> Thanks! Your application was successfully submitted. </div>
     </div>
 
 </div>
 <!-- END PAGE | Rush -->
 <!-- PAGE | CONTACT -->
-<div class="pages black-bg white page-contact" id="page-contact">
+<div class="pages black-bg white page-contact" id="rush-application">
     <div class="container">
         <!-- Header -->
         <header>
@@ -540,7 +540,10 @@
                 <div class="hero-unit">
                     <h4> Zeta Class Application </h4>
                     <div class="accordion" id="accordion">
-                    <%= simple_form_for(new_rush_application_path, :remote => true, :html => { :data => { :url => '/rush_applications/new', :type => :json } }) do |f| %> 
+                    <%= simple_form_for(:application, 
+                        :remote => true, 
+                        :url => url_for(:action => "create", :controller => "rush_applications"),
+                        :method => :post) do |f| %> 
                       <div class="accordion-group">
                         <div class="accordion-heading">
                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
@@ -579,11 +582,11 @@
                         </div>
                         <div id="collapseThree" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <p> Please answer two of the prompts given. (200 words or less) </p>
-                            <%= f.input :short_answer1, as: :text, label: "1. What is your passion, and how does your passion drive you?" %> 
-                            <%= f.input :short_answer2, as: :text, label: "2. Identify one problem or inefficiency that can successfully be addressed by entrepreneurial action. Specify actionable items that can be applied to the situation. There is no need to constrain yourself to business-related industries — choose a topic in which you have authentic passion." %>
-                            <%= f.input :short_answer3, as: :text, label: "3. Identify a startup that inspires you. Analyze their business model and target market." %>
-                            <%= f.input :short_answer4, as: :text, label: "4. If you had to create a startup in any country other than the United States, which would it be and why?" %>
+                            <p> Please answer any two of the prompts below. (200 words or less each) </p>
+                            <%= f.input :short_answer1, required: false, as: :text, label: "1. What is your passion, and how does your passion drive you?" %> 
+                            <%= f.input :short_answer2, required: false, as: :text, label: "2. Identify one problem or inefficiency that can successfully be addressed by entrepreneurial action. Specify actionable items that can be applied to the situation. There is no need to constrain yourself to business-related industries — choose a topic in which you have authentic passion." %>
+                            <%= f.input :short_answer3, required: false, as: :text, label: "3. Identify a startup that inspires you. Analyze their business model and target market." %>
+                            <%= f.input :short_answer4, required: false, as: :text, label: "4. If you had to create a startup in any country other than the United States, which would it be and why?" %>
                           </div>
                         </div>
                       </div>
@@ -595,10 +598,12 @@
                         </div>
                         <div id="collapseFour" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <%= f.input :picture, as: :file %> 
+                            <%= f.input :picture, as: :file, label: "Please upload a picture of yourself, to help us identify you." %> 
+                            <%= f.input :resume, as: :file, label: "Please upload your updated resume." %>
                             <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
                                 f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
-                            end %>  
+                            end %>
+                            <div class="alert alert-danger"> Please verify your application is fully completed, and try again. </div>  
                             <%= f.button :submit, 'Submit' %>
                           </div>
                         </div>
@@ -613,4 +618,3 @@
         
     </div>
 </div>
-<!-- END PAGE | CONTACT

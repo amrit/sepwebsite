@@ -1,11 +1,17 @@
+
 $(document).ready(function(){
+    // }
     /**
     *   Global variables.
     */
     var pageHeight = $(window).height();
     var pageWidth = $(window).width();
     var navigationHeight = $("#navigation").outerHeight();
-    
+    var images = $('img');
+    var images_nbr = images.length;
+
+    $('body').fadeIn();
+    $('.alert.alert-success').hide();
     /**
     *   ON RESIZE, check again
     */
@@ -33,7 +39,14 @@ $(document).ready(function(){
         delay: 1500,
         fadeSpeed: 500
     });
-    
+
+    /* Rush Application Dropdown */
+    $('button#apply').click(function(e){
+        $('#rush-application').slideToggle();
+        $.scrollTo( '#rush-application', 800, {easing:'swing'} );
+    });
+
+
     /* Make embeded videos responsive. */
     $.fn.responsivevideos();
     
@@ -42,13 +55,13 @@ $(document).ready(function(){
         interval: 10000,
     });
 
-    $('#quote-slider').each(function(){
-        if($('.item', this).length) {
-            $(this).carousel({
-                interval: false
-            });
-        }
-    });
+    // $('#quote-slider').each(function(){
+    //     if($('.item', this).length) {
+    //         $(this).carousel({
+    //             interval: false
+    //         });
+    //     }
+    // });
 
     $('#brothers-carousel').carousel({
         interval: false,
@@ -61,6 +74,8 @@ $(document).ready(function(){
             });
         }
     });
+
+    
     
     /* Scroll spy and scroll filter */
     $('#main-menu').onePageNav({
@@ -191,11 +206,15 @@ $(document).ready(function(){
 */
 $( document ).ajaxSend( function() {
     /* Show loader. */
-    if($(".loading").length === 0) {
-        $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
-        $(".loading").slideDown();
-        $(".loading .progress .bar").delay(300).css("width", "100%");
-    }
+    // if($(".loading").length === 0) {
+    //     $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
+    //     $(".loading").slideDown();
+    //     $(".loading .progress .bar").delay(300).css("width", "100%");
+    //     $('#rush-application').delay(300).slideUp(1400);
+    //     $('#apply').html('Thanks!');
+    //     $('#apply').attr('disabled','disabled');
+    //     $('#apply').attr('disabled','disabled');
+    // }
 });
 
 /**

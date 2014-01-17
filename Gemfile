@@ -26,6 +26,8 @@ gem 'aws-sdk'
 
 gem 'paperclip'
 
+gem 'remotipart'
+
 gem 'seed_dump'
 
 gem 'simple_form'

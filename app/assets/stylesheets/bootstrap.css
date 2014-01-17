@@ -1027,6 +1027,16 @@ footer {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box
 }
+
+.alert.alert-danger {
+	display: none;
+	margin-top: 25px;
+}
+
+.alert.alert-success {
+	display: inline-block;
+	padding-right: 14px;
+}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
 	display: block
 }
@@ -1489,7 +1499,7 @@ a: hover {
 .container-fluid: after {
 	clear: both
 }
-@font-face {
+/*@font-face {
 	font-family: 'ChunkFiveRegular';
 	src: url('../fonts/Chunkfive-webfont.eot');
 	src: url('../fonts/Chunkfive-webfont.eot?#iefix') format('embedded-opentype'),url('../fonts/Chunkfive-webfont.woff') format('woff'),url('../fonts/Chunkfive-webfont.ttf') format('truetype'),url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg');
@@ -1501,7 +1511,7 @@ a: hover {
 	@font-face {
 	font-family: 'ChunkFiveRegular';
 	src: url('../fonts/Chunkfive-webfont.svg#ChunkFiveRegular') format('svg')
-}
+}*/
 
 }
 p {
@@ -1903,7 +1913,7 @@ select,input[type="file"] {
 	line-height: 37px
 }
 select {
-	width: 220px;
+	width: 265px;
 	border: 1px solid #ccc;
 	background-color: #fff
 }
@@ -3343,8 +3353,7 @@ button.close {
 .btn.disabled,.btn[disabled] {
 	cursor: default;
 	background-image: none;
-	opacity: .65;
-	filter: alpha(opacity=65);
+	opacity: 1;
 	-webkit-box-shadow: none;
 	-moz-box-shadow: none;
 	box-shadow: none
