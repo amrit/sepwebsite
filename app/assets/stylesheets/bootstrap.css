@@ -1027,6 +1027,16 @@ footer {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box
 }
+
+.alert.alert-danger {
+	display: none;
+	margin-top: 25px;
+}
+
+.alert.alert-success {
+	display: inline-block;
+	padding-right: 14px;
+}
 article,aside,details,figcaption,figure,footer,header,hgroup,nav,section {
 	display: block
 }
@@ -1903,7 +1913,7 @@ select,input[type="file"] {
 	line-height: 37px
 }
 select {
-	width: 220px;
+	width: 265px;
 	border: 1px solid #ccc;
 	background-color: #fff
 }

@@ -11,7 +11,7 @@ $(document).ready(function(){
     var images_nbr = images.length;
 
     $('body').fadeIn();
-    
+    $('.alert.alert-success').hide();
     /**
     *   ON RESIZE, check again
     */
@@ -77,6 +77,15 @@ $(document).ready(function(){
             });
         }
     });
+
+    
+    var $inner = $("ul.thumbnails.about-brothers");
+    var $outer = $("article#brothers");
+    
+    if ($inner.innerHeight() > $outer.innerHeight()){
+        $outer.animate({height:$inner.innerHeight() + "px"});
+    }
+    
     
     /* Scroll spy and scroll filter */
     $('#main-menu').onePageNav({
@@ -207,15 +216,15 @@ $(document).ready(function(){
 */
 $( document ).ajaxSend( function() {
     /* Show loader. */
-    if($(".loading").length === 0) {
-        $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
-        $(".loading").slideDown();
-        $(".loading .progress .bar").delay(300).css("width", "100%");
-        $('#rush-application').delay(300).slideUp(1400);
-        $('#apply').html('Thanks!');
-        $('#apply').attr('disabled','disabled');
-        $('#apply').attr('disabled','disabled');
-    }
+    // if($(".loading").length === 0) {
+    //     $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
+    //     $(".loading").slideDown();
+    //     $(".loading .progress .bar").delay(300).css("width", "100%");
+    //     $('#rush-application').delay(300).slideUp(1400);
+    //     $('#apply').html('Thanks!');
+    //     $('#apply').attr('disabled','disabled');
+    //     $('#apply').attr('disabled','disabled');
+    // }
 });
 
 /**

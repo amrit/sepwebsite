@@ -1,10 +1,19 @@
 class RushApplicationsController < ApplicationController
 	def create
-		puts []
 		@application = Application.new(params[:application])
 		respond_to do |format|
 	    if @application.save
-	      format.js {}
+	    	format.html { render nothing: true }
+	    	format.js do 
+	      	render :js => "					 
+												 $('#rush-application').delay(300).slideUp(1400);
+												 $('#apply').hide();
+												 $('.alert.alert-success').show(); "
+        end
+	    else
+	    	format.js do
+	    		render :js => "$('.alert.alert-danger').show();"
+	    	end
 	    end
 	  end
 	end
