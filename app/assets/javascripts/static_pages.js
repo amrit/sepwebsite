@@ -19,7 +19,7 @@ $(document).ready(function(){
         pageWidth = $(window).width();
         pageHeight = $(window).height();
     });
-    
+
     
     /**
     *   ON LOAD
@@ -244,4 +244,8 @@ $( document ).ajaxComplete(function() {
     });
 });
 
-
+// $('.accordion-toggle').on('click',function(e){
+//     if($(this).parents('.accordion-group').children('.accordion-body').hasClass('in')){
+//         e.stopPropagation();
+//     }
+// });
