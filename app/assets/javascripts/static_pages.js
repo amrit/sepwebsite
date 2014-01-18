@@ -75,11 +75,11 @@ $(document).ready(function(){
         }
     });
 
-    $('#brothers-carousel').bind('slide', function(e) {
+    /*$('#brothers-carousel').bind('slide', function(e) {
        $('#brothers-carousel').animate({height: $(e.relatedTarget).outerHeight()}, function(){
         $('#brothers-carousel').css('overflow', 'visible');
        });
-    });     
+    });*/     
     
     
     /* Scroll spy and scroll filter */
