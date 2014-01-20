@@ -213,6 +213,24 @@
                             <% end %> 
                         </div>
                         <div class="item">
+                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
+                            <% for brother in @brothers[36..38] do %> 
+                                <% if brother.status != "Alumnus" %> 
+                                    <li class="span4 center">
+                                        <div class="item">
+                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                        </div>
+                                        
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                            <small><%= brother.pledge_class %> </small> <br/>
+                                            <small> <%= brother.status %> </small>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %> 
+                        </div>
+                        <div class="item">
                            <h3 class="center"><i> Alumni </i></h3>
                            <table class="table">
                             <tbody>
