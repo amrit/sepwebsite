@@ -76,11 +76,6 @@
         <div class="span8 offset2">
 
             <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#quote-carousel" data-slide-to="0" class=""></li>
-                  <li data-target="#quote-carousel" data-slide-to="1" class="active"></li>
-                  <li data-target="#quote-carousel" data-slide-to="2" class=""></li>
-                </ol>
         
                 <!-- Carousel Slides / Quotes -->
                 <div class="carousel-inner">
@@ -102,6 +97,14 @@
                       <small><strong>Eric Liu, Founding Member</strong></small>                    
                   </div>
                 </div>
+                <div class="row">
+                    <ol class="carousel-indicators">
+                          <li data-target="#quote-carousel" data-slide-to="0" class=""></li>
+                          <li data-target="#quote-carousel" data-slide-to="1" class="active"></li>
+                          <li data-target="#quote-carousel" data-slide-to="2" class=""></li>
+                    </ol>
+                </div>
+
             </div>
         </div>
     </div>           
@@ -208,6 +211,49 @@
                                     </li>
                                 <% end %>
                             <% end %> 
+                        </div>
+                        <div class="item">
+                           <h3 class="center"><i> Alumni </i></h3>
+                           <table class="table">
+                            <tbody>
+                              <tr>
+                             <% for brother in @alumni[0..4] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>      
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[5..9] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[10..14] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                             
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[15..19] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                           
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[20..24] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                             
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[25..29] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                               
+                            <% end %> 
+                              </tr>
+                              <tr>
+                             <% for brother in @alumni[30..31] do %>                                                      
+                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                            
+                            <% end %> 
+                              </tr>
+
+                            </tbody>
+                        </table>
                         </div>
                     </div>
                         
@@ -453,7 +499,7 @@
                         <u>DISCLAIMER:</u> Mandatory meetings will be held on every  ____ and ____. We emphasize attendance as a key part of pledging; therefore, please note in advance that commitment is necessary.
                     </p> </br>
 
-                    <p> If you have any questions or concerns please contact <%= mail_to "sherry95@berkeley.edu", "Sherry Chen" %>. </p>
+                    <p> If you have any questions or concerns please contact <%= mail_to "rushsigmaetapi@gmail.com", "Sherry Chen" %>. </p>
 
                     <p> <strong> Application due on Thursday, February 6th by 11:59pm </strong> </p>
 

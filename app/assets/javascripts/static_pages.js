@@ -25,6 +25,10 @@ $(document).ready(function(){
     *   ON LOAD
     */
 
+    $('a.alumnus-info').tooltip({
+        trigger: 'hover',
+        html: true
+    });
     /* Initialize scroll so if user droped to other part of page then home page. */
     $(window).trigger('scroll');
     
@@ -52,7 +56,7 @@ $(document).ready(function(){
     
     /* Carousel "Quote slider" initialization. */
     $('#quote-carousel').carousel({
-        interval: 10000,
+        interval: 5000,
     });
 
     // $('#quote-slider').each(function(){
