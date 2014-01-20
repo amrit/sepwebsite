@@ -20,6 +20,12 @@ $(document).ready(function(){
         pageHeight = $(window).height();
     });
 
+    // $("body").append('<div class="loading"><div class="progress progress-striped active"><div class="bar"></div></div></div>');
+    // $(".loading").slideDown();
+    // var current = (bytesRead/bytesTotal) + "%";
+    // $(".loading .progress .bar").delay(300).css("width", current);
+
+    $('body').fadeIn(2000);
     
     /**
     *   ON LOAD
