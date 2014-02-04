@@ -33,6 +33,11 @@ gem 'seed_dump'
 
 gem 'simple_form'
 
+gem 'wkhtmltopdf-binary'
+
+gem 'wicked_pdf'
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

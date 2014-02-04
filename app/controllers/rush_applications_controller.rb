@@ -17,4 +17,16 @@ class RushApplicationsController < ApplicationController
 	    end
 	  end
 	end
+
+	def show
+		respond_to do |format|
+			@all = Application.all
+			@all.each do |resume|
+	      format.html
+	      format.pdf do
+	        render :pdf => resume.resume
+	      end
+	    end
+    end
+	end
 end
