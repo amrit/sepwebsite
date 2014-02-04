@@ -19,12 +19,12 @@ class RushApplicationsController < ApplicationController
 	end
 
 	def show
-		respond_to do |format|
-			@all = Application.all
-			@all.each do |resume|
+		@application = Application.find(params[:id])
+			respond_to do |format|
 	      format.html
 	      format.pdf do
-	        render :pdf => resume.resume
+	        render :pdf => "file_name",
+	        				:template => 'professors/show.html.erb'
 	      end
 	    end
     end
