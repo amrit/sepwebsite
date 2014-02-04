@@ -24,9 +24,8 @@ class RushApplicationsController < ApplicationController
 	      format.html
 	      format.pdf do
 	        render :pdf => "file_name",
-	        				:template => 'professors/show.html.erb'
+	        				:template => 'rush_applications/show.pdf.html.erb'
 	      end
 	    end
-    end
 	end
 end
