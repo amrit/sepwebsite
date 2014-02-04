@@ -1,2 +1,36 @@
-<p>Applicant Name: <%= @application.name %></p>
+<p>Name: <%= @application.name %></p>
+<% image_tag @application.avatar %> 
+
 <p>Applicant Email: <%= @application.email %></p>
+
+<p>Applicant Phone: <%= @application.phone_number %></p>
+
+<p>Applicant Year: <%= @application.year %></p>
+
+<p>Applicant Major: <%= @application.email %></p>
+
+<p>Applicant Extracurriculars: <%= @application.extracurriculars %></p>
+
+<p>Applicant Hobbies: <%= @application.hobbies %></p>
+
+<p>Why SEP?</p> <br/>
+<p> <%= @application.why_sep %> </p>
+
+
+<p> Short Answer </p>
+
+<ul> 
+	<li> <%= @application.short_answer1 %> </li>
+	<li> <%= @application.short_answer2 %> </li>
+	<li> <%= @application.short_answer3 %> </li>
+	<li> <%= @application.short_answer4 %> </li>
+</ul>
+
+<p> Where did you hear about SEP? <% @application.reference %> </p>
+
+
+
+
+
+
+
