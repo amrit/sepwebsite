@@ -35,6 +35,13 @@ $(document).ready(function(){
         trigger: 'hover',
         html: true
     });
+
+    $('img.img-circle').tooltip({
+        trigger: 'hover',
+        html: true
+    });
+
+
     /* Initialize scroll so if user droped to other part of page then home page. */
     $(window).trigger('scroll');
     

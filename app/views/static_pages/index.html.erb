@@ -146,7 +146,15 @@
                                 <% if brother.status != "Alumnus" %> 
                                     <li class="span4 center">
                                         <div class="item">
-                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                          <% if brother.education && brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% elsif brother.education %>
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
+                                          <% elsif brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% else %>
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
+                                          <% end %>                            
                                         </div>
                                         
                                         <h5>
@@ -164,7 +172,15 @@
                                 <% if brother.status != "Alumnus" %> 
                                     <li class="span4 center">
                                         <div class="item">
-                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                          <% if brother.education && brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% elsif brother.education %>
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
+                                          <% elsif brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% else %>
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
+                                          <% end %>                            
                                         </div>
                                         
                                         <h5>
@@ -182,7 +198,15 @@
                                 <% if brother.status != "Alumnus" %> 
                                     <li class="span4 center">
                                         <div class="item">
-                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                          <% if brother.education && brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% elsif brother.education %>
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
+                                          <% elsif brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% else %>
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
+                                          <% end %>                            
                                         </div>
                                         
                                         <h5>
@@ -200,7 +224,15 @@
                                 <% if brother.status != "Alumnus" %> 
                                     <li class="span4 center">
                                         <div class="item">
-                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                          <% if brother.education && brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% elsif brother.education %>
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
+                                          <% elsif brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% else %>
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
+                                          <% end %>                            
                                         </div>
                                         
                                         <h5>
@@ -218,7 +250,15 @@
                                 <% if brother.status != "Alumnus" %> 
                                     <li class="span4 center">
                                         <div class="item">
-                                            <%= image_tag(brother.avatar.url, :class => "img-circle") %>
+                                          <% if brother.education && brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% elsif brother.education %>
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
+                                          <% elsif brother.work %> 
+                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
+                                          <% else %>
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
+                                          <% end %>                            
                                         </div>
                                         
                                         <h5>
@@ -235,7 +275,7 @@
                            <table class="table">
                             <tbody>
                               <tr>
-                             <% for brother in @alumni[0..4] do %>                                                      
+                             <% for brother in @alumni[0..4] do %>                                                     
                                   <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>      
                             <% end %> 
                               </tr>
