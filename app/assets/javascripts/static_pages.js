@@ -36,7 +36,7 @@ $(document).ready(function(){
         html: true
     });
 
-    $('img.img-circle').tooltip({
+    $('img#tool').tooltip({
         trigger: 'hover',
         html: true
     });
