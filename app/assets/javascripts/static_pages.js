@@ -38,8 +38,7 @@ $(document).ready(function(){
 
     $('img#tool').tooltip({
         trigger: 'hover',
-        html: true,
-        placement: 'right'
+        html: true
     });
 
 
