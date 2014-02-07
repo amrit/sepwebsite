@@ -1,5 +1,8 @@
+<%= wicked_pdf_stylesheet_link_tag "bootstrap" %>
+
+
 <p>Name: <%= @application.name %></p>
-<% image_tag @application.picture.url %> 
+<%= image_tag @application.picture.url %> 
 
 <p>Applicant Email: <%= @application.email %></p>
 
