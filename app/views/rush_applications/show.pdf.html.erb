@@ -3,7 +3,7 @@
 
 
 <p>Name: <%= @application.name %></p>
-<%= image_tag(@application.picture.url, size: "200") %> 
+<%= image_tag(@application.picture.url, size: "200") %> <br />
 
 <p>Applicant Email: <%= @application.email %></p>
 
@@ -13,34 +13,36 @@
 
 <p>Applicant Major: <%= @application.email %></p>
 
+<hr />
 <p>Applicant Extracurriculars:</p> <br />
 <p> <%= @application.extracurriculars.gsub("\n","<br />").html_safe %></p>
-
+<hr />
 <p>Applicant Hobbies:</p> <br />
 <p> <%= @application.hobbies.gsub("\n","<br />").html_safe %></p>
-
+<hr />
 <p>Why SEP?</p> <br/>
 <p> <%= @application.why_sep.gsub("\n","<br />").html_safe %> </p>
-
+<hr />
 
 <p> Short Answer </p>
 
 <ul> 
-	<% if @application.short_answer1 %>
+	<% if @application.short_answer1.length > 0 %>
 		<li> <%= @application.short_answer1.gsub("\n","<br />").html_safe %> </li>
 	<% end %> 
-	<% if @application.short_answer2 %>
+	<% if @application.short_answer2.length > 0 %>
 		<li> <%= @application.short_answer2.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
-	<% if @application.short_answer3 %>
+	<% if @application.short_answer3.length > 0 %>
 		<li> <%= @application.short_answer3.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
-	<% if @application.short_answer4 %>
+	<% if @application.short_answer4.length > 0 %>
 		<li> <%= @application.short_answer4.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
 </ul>
 
-<p> Where did you hear about SEP? <% @application.reference %> </p>
+<p> Where did you hear about SEP? </p>
+<p> <% @application.reference %> </p>
 
 
 
