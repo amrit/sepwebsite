@@ -3,7 +3,8 @@
 
 
 <p>Name: <%= @application.name %></p>
-<%= image_tag(@application.picture.url, height: '32', width: '32') %> <br />
+<%= image_tag(@application.picture.url, :class => "application-picture") %>
+<br />
 
 <p>Applicant Email: <%= @application.email %></p>
 
