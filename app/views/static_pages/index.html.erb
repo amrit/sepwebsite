@@ -534,7 +534,7 @@
             
     </div>
     <div class="rush-application">
-        <button disabled href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application Closed </button>
+        <button href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application </button>
         <div class='alert alert-success'> Thanks! Your application was successfully submitted. </div>
     </div>
 
@@ -550,16 +550,12 @@
             <div class="row">
                 <div class="span8 offset2">
                     <p>
-                        If you're interested in joining our Zeta class, please fill out the application below.
+                        If you're interested in joining our ETA class, please fill out the application below.
                     </p>
 
-                    <p>
-                        <u>DISCLAIMER:</u> Mandatory meetings will be held weekly on either Thursdays or Tuesdays at 8pm. We emphasize attendance as a key part of pledging; please note in advance that we expect you to commit to one of those two days.
-                    </p> </br>
+                    <p> If you have any questions or concerns please contact <%= mail_to "bryantang@berkeley.edu", "Bryan Tang" %>. </p>
 
-                    <p> If you have any questions or concerns please contact <%= mail_to "rushsigmaetapi@gmail.com", "Sherry Chen" %>. </p>
-
-                    <p> <strong> Application due on Saturday, February 8th by 9:00am </strong> </p>
+                    <p> <strong> Application due on Saturday, September 6th by 1:00am </strong> </p>
 
                 </div>
 
@@ -572,7 +568,7 @@
             <div class="row-fluid">
                 <!-- Contact form -->
                 <div class="hero-unit">
-                    <h4> Zeta Class Application </h4>
+                    <h4> Eta Class Application </h4>
                     <div class="accordion" id="accordion2">
                     <%= simple_form_for(:application, 
                         :remote => true, 
@@ -637,6 +633,8 @@
                             <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
                                 f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
                             end %>
+                            <%= f.input :signature %> 
+                            <%= f.input :date %> 
                             <div class="alert alert-danger"> Please verify your application is fully completed, and try again. </div>  
                             <%= f.button :submit, 'Submit' %>
                           </div>
