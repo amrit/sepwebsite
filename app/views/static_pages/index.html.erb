@@ -633,8 +633,6 @@
                             <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
                                 f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
                             end %>
-                            <%= f.input :signature %> 
-                            <%= f.input :date %> 
                             <div class="alert alert-danger"> Please verify your application is fully completed, and try again. </div>  
                             <%= f.button :submit, 'Submit' %>
                           </div>
