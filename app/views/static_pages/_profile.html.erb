@@ -1,0 +1,38 @@
+<div class="modal fade" id="profileModal<%=profile.id%>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div style="color: black" class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <center>
+                      <img src=<%= profile.avatar.url %>width="140" height="140" border="0" class="img-circle"></a>
+                  <h3 class="media-heading"><%= profile.name %></h3>
+                    <span class="label label-info"><%= profile.pledge_class %></span>
+                    <span class="label label-info"><%= profile.status %></span>
+                    </center>
+                    <hr>
+                    <center>
+                    <p class="text-left"><strong>Education: </strong>
+                    <%= profile.education %></p>
+                    <br>
+                    <% if profile.work %>
+                      <p class="text-left"><strong>Work: </strong>
+                      <%= profile.work %></p>
+                      <br>
+                    <% end %>
+                    <% if profile.press %>
+                      <p class="text-left"><strong>Press: </strong></p>
+                      <ul>
+                      <%= profile.press %>
+                      </ul>
+                      <br>
+                    <% end %>
+                    <br>
+                    </center>
+                </div>
+                <div class="modal-footer">
+                    <center>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </center>
+                </div>
+            </div>
+        </div>
+</div>

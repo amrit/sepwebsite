@@ -10,7 +10,7 @@
                     <span class="icon-bar"></span>
                 </div>
                 <!-- END MOBILE MENU BUTTON -->
-                
+
                 <!-- MAIN MENU -->
                 <ul id="main-menu" class="nav-collapse collapse">
                     <li><a href="#page-welcome">Home</a></li>
@@ -21,7 +21,7 @@
                     <li><a href="#page-rush">Rush</a></li>
                 </ul>
                 <!-- END MAIN MENU -->
-                
+
             </div>
         </div>
     </div>
@@ -43,7 +43,7 @@
                                 <%= image_tag("whitebigseplogo.png", width: "370", alt: "SEP") %>
                             </a>
                         </div>
-                    </div>                    
+                    </div>
                     <p>UC Berkeley's Premier Entrepreneurship Fraternity</p>
                     <div id="cursor">
                     </div>
@@ -71,12 +71,12 @@
                         We educate our brothers with the most comprehensive knowledge of the <b>start-up ecosystem</b> and <b>venture processes</b> and equip them with a concrete set of skills sourced from the diverse backgrounds of our house.
                     </p>
                 </div>
-            </div> 
+            </div>
         </header>
         <div class="span8 offset2">
 
             <div class="carousel slide" data-ride="carousel" id="quote-carousel">
-        
+
                 <!-- Carousel Slides / Quotes -->
                 <div class="carousel-inner">
                   <div class="item">
@@ -86,15 +86,15 @@
                   </div>
                   <!-- Quote 2 -->
                   <div class="item active">
-                    <hr>            
+                    <hr>
                       "SEP was a time of exploration, an opportunity for growth, and most importantly, a place to call home. New ways of thinking, seeing, and believing come together; the world you used to know becomes much smaller, and the world you didn't know becomes much brighter."<br>
                       <small><strong>Andy Yang, Founding Member</strong></small>
                   </div>
                   <!-- Quote 3 -->
                   <div class="item">
-                    <hr>                      
+                    <hr>
                       Sigma Eta Pi is filled with individuals that I can confidently say are my inspiration and my family. We're a little quirky, a lot of fun, and undeniably passionate and talented. I grew immeasurably as a leader and entrepreneur and met my best friends. Hands down the best and most defining part of my college experience.<br>
-                      <small><strong>Eric Liu, Founding Member</strong></small>                    
+                      <small><strong>Eric Liu, Founding Member</strong></small>
                   </div>
                 </div>
                 <div class="row">
@@ -107,7 +107,7 @@
 
             </div>
         </div>
-    </div>           
+    </div>
 </div>
 <!-- END PAGE | About -->
 
@@ -125,7 +125,7 @@
             <h4 class="line-divider"></h4>
         </header>
         <!-- End Header -->
-        
+
         <!-- Article -->
         <article id="brothers">
             <ul class="thumbnails about-items">
@@ -140,188 +140,104 @@
                     </ol>
                     <!-- Carousel items -->
                     <div class="carousel-inner">
+                        <%= render partial: "static_pages/profile", :collection => @brothers%>
                         <div class="active item">
                            <!--<h4 class="center"><i> Founding Class </i></h4>-->
-                            <% for brother in @brothers[0..8] do %> 
-                                <% if brother.status != "Alumnus" %> 
+                            <% for brother in @brothers[0..8] do %>
+                                <% if brother.status != "Alumnus" %>
                                     <li class="span4 center">
                                         <div class="item">
-                                          <% if brother.education && brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% elsif brother.education %>
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
-                                          <% elsif brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% else %>
-                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
-                                          <% end %>                            
+                                          <a href="" data-toggle="modal" data-target="#profileModal<%= brother.id %>">
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/>
+                                          </a>
                                         </div>
-                                        
-                                        <h5>
-                                            <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class %> class</small> <br/>
-                                            <small> <%= brother.status %> </small>
-                                        </h5>
-                                    </li>
-                                <% end %>
-                            <% end %> 
-                        </div>
-                        <div class="item">
-                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
-                            <% for brother in @brothers[9..17] do %> 
-                                <% if brother.status != "Alumnus" %> 
-                                    <li class="span4 center">
-                                        <div class="item">
-                                          <% if brother.education && brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% elsif brother.education %>
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
-                                          <% elsif brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% else %>
-                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
-                                          <% end %>                            
-                                        </div>
-                                        
-                                        <h5>
-                                            <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class %> </small> <br/>
-                                            <small> <%= brother.status %> </small>
-                                        </h5>
-                                    </li>
-                                <% end %>
-                            <% end %> 
-                        </div>
-                        <div class="item">
-                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
-                            <% for brother in @brothers[18..26] do %> 
-                                <% if brother.status != "Alumnus" %> 
-                                    <li class="span4 center">
-                                        <div class="item">
-                                          <% if brother.education && brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% elsif brother.education %>
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
-                                          <% elsif brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% else %>
-                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
-                                          <% end %>                            
-                                        </div>
-                                        
-                                        <h5>
-                                            <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class %> </small> <br/>
-                                            <small> <%= brother.status %> </small>
-                                        </h5>
-                                    </li>
-                                <% end %>
-                            <% end %> 
-                        </div>
-                        <div class="item">
-                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
-                            <% for brother in @brothers[27..35] do %> 
-                                <% if brother.status != "Alumnus" %> 
-                                    <li class="span4 center">
-                                        <div class="item">
-                                          <% if brother.education && brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% elsif brother.education %>
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
-                                          <% elsif brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% else %>
-                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
-                                          <% end %>                            
-                                        </div>
-                                        
-                                        <h5>
-                                            <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class %> </small> <br/>
-                                            <small> <%= brother.status %> </small>
-                                        </h5>
-                                    </li>
-                                <% end %>
-                            <% end %> 
-                        </div>
-                        <div class="item">
-                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
-                            <% for brother in @brothers[36..38] do %> 
-                                <% if brother.status != "Alumnus" %> 
-                                    <li class="span4 center">
-                                        <div class="item">
-                                          <% if brother.education && brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% elsif brother.education %>
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> </div>"/> 
-                                          <% elsif brother.work %> 
-                                            <img class = "img-circle" id="tool" src=<%= brother.avatar.url %> data-toggle="tooltip" title="<div> <p> <%= brother.work %> </p> </div>"/> 
-                                          <% else %>
-                                            <img class = "img-circle" src=<%= brother.avatar.url %>/> 
-                                          <% end %>                            
-                                        </div>
-                                        
-                                        <h5>
-                                            <%= brother.name %> <br/>
-                                            <small><%= brother.pledge_class %> </small> <br/>
-                                            <small> <%= brother.status %> </small>
-                                        </h5>
-                                    </li>
-                                <% end %>
-                            <% end %> 
-                        </div>
-                        <div class="item">
-                           <h3 class="center"><i> Alumni </i></h3>
-                           <table class="table">
-                            <tbody>
-                              <tr>
-                             <% for brother in @alumni[0..4] do %>                                                     
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>      
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[5..9] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[10..14] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                             
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[15..19] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                           
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[20..24] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                             
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[25..29] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                               
-                            <% end %> 
-                              </tr>
-                              <tr>
-                             <% for brother in @alumni[30..31] do %>                                                      
-                                  <td><a class="alumnus-info" data-toggle="tooltip" title="<div> <p> <%= brother.education%> </p> <p> <%= brother.work %> </p> </div>"> <%= brother.name %></a></td>                            
-                            <% end %> 
-                              </tr>
 
-                            </tbody>
-                        </table>
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="item">
+                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
+                            <% for brother in @brothers[9..17] do %>
+                                <% if brother.status != "Alumnus" %>
+                                    <li class="span4 center">
+                                        <div class="item">
+                                          <a href="" data-toggle="modal" data-target="#profileModal<%= brother.id %>">
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/>
+                                          </a>
+                                        </div>
+
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="item">
+                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
+                            <% for brother in @brothers[18..26] do %>
+                                <% if brother.status != "Alumnus" %>
+                                    <li class="span4 center">
+                                        <div class="item">
+                                          <a href="" data-toggle="modal" data-target="#profileModal<%= brother.id %>">
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/>
+                                          </a>
+                                        </div>
+
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="item">
+                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
+                            <% for brother in @brothers[27..35] do %>
+                                <% if brother.status != "Alumnus" %>
+                                    <li class="span4 center">
+                                        <div class="item">
+                                          <a href="" data-toggle="modal" data-target="#profileModal<%= brother.id %>">
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/>
+                                          </a>
+                                        </div>
+
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                        </h5>
+                                    </li>
+                                <% end %>
+                            <% end %>
+                        </div>
+                        <div class="item">
+                           <!--<h4 class="center"><i> Founding Class </i></h4>-->
+                            <% for brother in @brothers[36..38] do %>
+                                    <li class="span4 center">
+                                        <div class="item">
+                                          <a href="" data-toggle="modal" data-target="#profileModal">
+                                            <img class = "img-circle" src=<%= brother.avatar.url %>/>
+                                          </a>
+                                        </div>
+
+                                        <h5>
+                                            <%= brother.name %> <br/>
+                                        </h5>
+                                    </li>
+                            <% end %>
                         </div>
                     </div>
-                        
+
                     <!-- Carousel indicators -->
                     <a class="carousel-control left" href="#brothers-carousel" data-slide="prev">
                         <i class="fa fa-chevron-left"></i>
                     </a>
                     <a class="carousel-control right" href="#brothers-carousel" data-slide="next">
                         <i class="fa fa-chevron-right"></i>
-                    </a> 
+                    </a>
                 </div>
             </ul>
         </article>
@@ -335,7 +251,7 @@
     <div class="overlay"></div>
     <div class="container">
          <!-- Header -->
-        <header>             
+        <header>
             <h1>Events</h1>
             <h4 class="line-divider"></h4>
             <div class="row">
@@ -347,28 +263,28 @@
             </div>
         </header>
          <!-- End Header -->
-         
+
         <!-- Article -->
             <article>
                 <!-- Blog articles -->
                 <ul class="thumbnails">
                     <!-- Blog post -->
                     <li class="span4">
-                    
+
                         <!-- Blog image -->
-                      
-                        <%= image_tag("social-media-effect.jpg") %> 
-                        
-                        
+
+                        <%= image_tag("social-media-effect.jpg") %>
+
+
                         <!-- Blog title -->
                         <h5>
                             The Social Media Effect<br/>
                             <small>Fall 2013</small>
                         </h5>
-                        
+
                         <!-- Blog post description -->
                         <p class="smallFontBy08"> The Social Media Effect was a speaker panel featuring Spotify, Mounza, Ribbon, and other prominent startups in the Bay Area. This panel of industry experts discussed social media, and it's impact on the start-up landscape both in the present and the future.</p>
-                        
+
                     </li>
                     <li class="span4">
                         <%= image_tag("starter-fair.jpg") %>
@@ -405,18 +321,18 @@
                 </ul>
             </article>
             <!-- End Article -->
-        
+
     </div>
-    
+
 </div>
 
 <!-- PAGE | Endeavors -->
 <div class="pages page-endeavors" id="page-endeavors">
 	<div class="overlay"></div>
   <div class="container">
-	  	<header>            
+	  	<header>
 	    <h1>Endeavors</h1>
-	    <h4 class="line-divider"></h4>    
+	    <h4 class="line-divider"></h4>
 	    <div class="row">
 	        <div class="span8 offset2">
 	            <p>
@@ -437,14 +353,14 @@
           </div> -->
 
           <div class="span2 center">
-              <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %> 
+              <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %>
           </div>
 
           <div class="span2 center">
               <%= link_to image_tag("resolutiontube.png"), "http://www.resolutiontube.com/" %>
           </div>
       </div>
-      
+
   </div>
 </div>
 <!-- END PAGE | Endeavors -->
@@ -454,7 +370,7 @@
         <!-- Header -->
         <header>
             <h1>Rush</h1>
-            <h4 class="line-divider"></h4>    
+            <h4 class="line-divider"></h4>
         </header>
         <!-- End Header -->
         <article>
@@ -462,11 +378,11 @@
             <ul class="thumbnails">
                 <!-- Blog post -->
                 <li class="span6">
-                
+
                     <h4>
                         Meet the Chapter<br/>
                     </h4>
-                    
+
                     <ul>
                         <li> <strong>Date:</strong> Thursday, Sept 4th </li>
                         <li> <strong>Location:</strong> Bancroft Hotel </li>
@@ -476,11 +392,11 @@
                 </li>
 
                 <li class="span6" style="margin-left: 139px;">
-                
+
                     <h4>
                        Social Night<br/>
                     </h4>
-                    
+
                     <ul>
                         <li> <strong>Date:</strong> Friday, Sept 5th </li>
                         <li> <strong>Location:</strong> Caffé Strada </li>
@@ -490,11 +406,11 @@
                 </li>
 
                 <li class="span6" style="float: right; margin-right: 82px;">
-                
+
                     <h4>
                        Individual Interviews <br /><small>(By Appointment)</small><br/>
                     </h4>
-                    
+
                     <ul>
                         <li> <strong>Date:</strong> Saturday, Sept 6th - </li>
                         <li style="margin-left: 47px;"> Sunday, Sept 7th </li>
@@ -506,24 +422,24 @@
             <ul id="second-row">
 
                 <li class="span6" style="margin-left: 120px;">
-                
+
                     <h4>
                        Group Interviews <br /><small>(Invite Only)</small><br/>
                     </h4>
-                    
+
                     <ul>
                         <li> <strong>Date:</strong> Monday, Sept 8th </li>
-                        
+
                         <li> <strong>Attire:</strong> Business Professional </li>
                     </ul>
                 </li>
 
                 <li class="span6" style="margin-left: 27px;">
-                
+
                     <h4>
                        Final Rush Event <br /><small>(Invite Only)</small><br/>
                     </h4>
-                    
+
                     <ul>
                         <li> <strong>Date:</strong> Tuesday, Sept 9th </li>
                         <li> <strong>Attire:</strong> Campus Casual </li>
@@ -531,7 +447,7 @@
                 </li>
             </ul>
         </article>
-            
+
     </div>
     <div class="rush-application">
         <button disabled href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application Closed </button>
@@ -566,7 +482,7 @@
             </div>
         </header>
         <!-- End Header -->
-        
+
         <!-- Start Article -->
         <article>
             <div class="row-fluid">
@@ -574,10 +490,10 @@
                 <div class="hero-unit">
                     <h4> Zeta Class Application </h4>
                     <div class="accordion" id="accordion2">
-                    <%= simple_form_for(:application, 
-                        :remote => true, 
+                    <%= simple_form_for(:application,
+                        :remote => true,
                         :url => url_for(:action => "create", :controller => "rush_applications"),
-                        :method => :post) do |f| %> 
+                        :method => :post) do |f| %>
                       <div class="accordion-group">
                         <div class="accordion-heading">
                           <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
@@ -586,10 +502,10 @@
                         </div>
                         <div id="collapseOne" class="accordion-body collapse in">
                           <div class="accordion-inner">
-                            <%= f.input :name %> 
-                            <%= f.input :email %> 
-                            <%= f.input :phone_number %> 
-                            <%= f.input :year %> 
+                            <%= f.input :name %>
+                            <%= f.input :email %>
+                            <%= f.input :phone_number %>
+                            <%= f.input :year %>
                             <%= f.input :major %>
                           </div>
                         </div>
@@ -603,8 +519,8 @@
                         <div id="collapseTwo" class="accordion-body collapse">
                           <div class="accordion-inner">
                             <%= f.input :extracurriculars,  as: :text, label: "1. What are your other commitments this semester? (List your classes, work and other extracurriculars along with the number of hours of commitment.)"  %>
-                            <%= f.input :hobbies, as: :text, label: "2. What are your hobbies? (100 words or less)" %> 
-                            <%= f.input :why_sep, as: :text, label: "3. Why do you want to be a part of SEP and what do you hope to accomplish during your time as a brother? (200 words or less)" %> 
+                            <%= f.input :hobbies, as: :text, label: "2. What are your hobbies? (100 words or less)" %>
+                            <%= f.input :why_sep, as: :text, label: "3. Why do you want to be a part of SEP and what do you hope to accomplish during your time as a brother? (200 words or less)" %>
                           </div>
                         </div>
                       </div>
@@ -617,7 +533,7 @@
                         <div id="collapseThree" class="accordion-body collapse">
                           <div class="accordion-inner">
                             <p> Please answer any two of the prompts below. (200 words or less each) </p>
-                            <%= f.input :short_answer1, required: false, as: :text, label: "1. What is your passion, and how does your passion drive you?" %> 
+                            <%= f.input :short_answer1, required: false, as: :text, label: "1. What is your passion, and how does your passion drive you?" %>
                             <%= f.input :short_answer2, required: false, as: :text, label: "2. Identify one problem or inefficiency that can successfully be addressed by entrepreneurial action. Specify actionable items that can be applied to the situation. There is no need to constrain yourself to business-related industries — choose a topic in which you have authentic passion." %>
                             <%= f.input :short_answer3, required: false, as: :text, label: "3. Identify a startup that inspires you. Analyze their business model and target market." %>
                             <%= f.input :short_answer4, required: false, as: :text, label: "4. If you had to create a startup in any country other than the United States, which would it be and why?" %>
@@ -632,23 +548,23 @@
                         </div>
                         <div id="collapseFour" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <%= f.input :picture, as: :file, label: "Please upload a picture of yourself, to help us identify you." %> 
+                            <%= f.input :picture, as: :file, label: "Please upload a picture of yourself, to help us identify you." %>
                             <%= f.input :resume, as: :file, label: "Please upload your updated resume." %>
                             <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
                                 f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
                             end %>
-                            <div class="alert alert-danger"> Please verify your application is fully completed, and try again. </div>  
+                            <div class="alert alert-danger"> Please verify your application is fully completed, and try again. </div>
                             <%= f.button :submit, 'Submit' %>
                           </div>
                         </div>
                       </div>
-                    <% end %> 
+                    <% end %>
                     </div>
                 </div>
                 <!-- End Contact form -->
             </div>
         </article>
         <!-- End Article -->
-        
+
     </div>
 </div>

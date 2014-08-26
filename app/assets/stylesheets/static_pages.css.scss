@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 /* carousel */
-#quote-carousel 
+#quote-carousel
 {
   padding: 0 10px 30px 10px;
   margin-top: 30px 0px 0px;
@@ -19,17 +19,17 @@
   margin-top: 30px;
 }
 /* Previous button  */
-#quote-carousel .carousel-control.left 
+#quote-carousel .carousel-control.left
 {
   left: -12px;
 }
 /* Next button  */
-#quote-carousel .carousel-control.right 
+#quote-carousel .carousel-control.right
 {
   right: -12px !important;
 }
 /* Changes the position of the indicators */
-#quote-carousel .carousel-indicators 
+#quote-carousel .carousel-indicators
 {
   visibility: hidden;
   right: 50%;
@@ -38,11 +38,11 @@
   margin-right: -19px;
 }
 /* Changes the color of the indicators */
-#quote-carousel .carousel-indicators li 
+#quote-carousel .carousel-indicators li
 {
   background: #c0c0c0;
 }
-#quote-carousel .carousel-indicators .active 
+#quote-carousel .carousel-indicators .active
 {
   background: #333333;
 }
@@ -55,7 +55,7 @@
 
 .item blockquote {
 	color:#292929;
-    border-left: none; 
+    border-left: none;
     margin: 0;
 }
 
@@ -86,23 +86,23 @@
 */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { 
-    #quote-carousel 
+@media (min-width: 768px) {
+    #quote-carousel
     {
       margin-bottom: 0;
       padding: 0 40px 30px 40px;
       margin-top: 30px;
     }
-    
+
 }
 
 /* Small devices (tablets, up to 768px) */
-@media (max-width: 768px) { 
-    
+@media (max-width: 768px) {
+
     /* Make the indicators larger for easier clicking with fingers/thumb on mobile */
-    
+
     #quote-carousel .carousel-indicators {
-        bottom: -20px !important;  
+        bottom: -20px !important;
     }
     #quote-carousel .carousel-indicators li {
         display: inline-block;
@@ -118,7 +118,7 @@
 }
 
 /* carousel */
-#brothers-carousel 
+#brothers-carousel
 {
   padding: 0 10px 30px 10px;
   margin-top: 30px 0px 0px;
@@ -133,17 +133,17 @@
   margin-top: 30px;
 }
 /* Previous button  */
-#brothers-carousel .carousel-control.left 
+#brothers-carousel .carousel-control.left
 {
   left: -12px;
 }
 /* Next button  */
-#brothers-carousel .carousel-control.right 
+#brothers-carousel .carousel-control.right
 {
   right: -12px !important;
 }
 /* Changes the position of the indicators */
-#brothers-carousel .carousel-indicators 
+#brothers-carousel .carousel-indicators
 {
   visibility: hidden;
   right: 50%;
@@ -152,13 +152,14 @@
   margin-right: -19px;
 }
 /* Changes the color of the indicators */
-#brothers-carousel .carousel-indicators li 
+#brothers-carousel .carousel-indicators li
 {
   background: #c0c0c0;
 }
-#brothers-carousel .carousel-indicators .active 
+#brothers-carousel .carousel-indicators .active
 {
   background: #333333;
 }
+
 
 /* End carousel */

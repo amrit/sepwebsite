@@ -3,19 +3,13 @@ development:
   encoding: unicode
   database: sepwebsite_development
   pool: 5
-  username: amritayalur
-  password: AceAce
 test:
   adapter: postgresql
   encoding: unicode
   database: sepwebsite_test
   pool: 5
-  username: amritayalur
-  password: AceAce
 production:
   adapter: postgresql
   encoding: unicode
   database: sepwebsite_production
   pool: 5
-  username: amritayalur
-  password: AceAce
