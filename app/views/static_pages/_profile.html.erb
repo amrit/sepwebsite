@@ -21,7 +21,7 @@
                     <% if profile.press %>
                       <p class="text-left"><strong>Press: </strong></p>
                       <ul>
-                      <%= profile.press %>
+                      <%= profile.press.html_safe %>
                       </ul>
                       <br>
                     <% end %>

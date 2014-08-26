@@ -51,7 +51,7 @@ ActiveRecord::Schema.define(:version => 20140826041243) do
     t.string   "status"
     t.string   "education"
     t.string   "work"
-    t.string   "press"
+    t.text     "press"
     t.string   "projects"
   end
 
