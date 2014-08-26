@@ -26,6 +26,14 @@
                       <br>
                     <% end %>
                     <br>
+                    <% if profile.projects %>
+                      <p class="text-left"><strong>Projects: </strong></p>
+                      <ul>
+                      <%= profile.projects.html_safe %>
+                      </ul>
+                      <br>
+                    <% end %>
+                    <br>
                     </center>
                 </div>
                 <div class="modal-footer">
