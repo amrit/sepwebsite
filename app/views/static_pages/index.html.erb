@@ -450,7 +450,7 @@
 
     </div>
     <div class="rush-application">
-        <button disabled href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application Closed </button>
+        <button href="#rush-application" id="apply" type="submit" class="btn btn-primary"> Application </button>
         <div class='alert alert-success'> Thanks! Your application was successfully submitted. </div>
     </div>
 
@@ -466,16 +466,12 @@
             <div class="row">
                 <div class="span8 offset2">
                     <p>
-                        If you're interested in joining our Zeta class, please fill out the application below.
+                        If you're interested in joining our ETA class, please fill out the application below.
                     </p>
 
-                    <p>
-                        <u>DISCLAIMER:</u> Mandatory meetings will be held weekly on either Thursdays or Tuesdays at 8pm. We emphasize attendance as a key part of pledging; please note in advance that we expect you to commit to one of those two days.
-                    </p> </br>
+                    <p> If you have any questions or concerns please contact <%= mail_to "bryantang@berkeley.edu", "Bryan Tang" %>. </p>
 
-                    <p> If you have any questions or concerns please contact <%= mail_to "rushsigmaetapi@gmail.com", "Sherry Chen" %>. </p>
-
-                    <p> <strong> Application due on Saturday, February 8th by 9:00am </strong> </p>
+                    <p> <strong> Application due on Saturday, September 6th by 1:00am </strong> </p>
 
                 </div>
 
@@ -488,7 +484,7 @@
             <div class="row-fluid">
                 <!-- Contact form -->
                 <div class="hero-unit">
-                    <h4> Zeta Class Application </h4>
+                    <h4> Eta Class Application </h4>
                     <div class="accordion" id="accordion2">
                     <%= simple_form_for(:application,
                         :remote => true,
@@ -532,11 +528,10 @@
                         </div>
                         <div id="collapseThree" class="accordion-body collapse">
                           <div class="accordion-inner">
-                            <p> Please answer any two of the prompts below. (200 words or less each) </p>
+                            <p> Please answer any 2 of the 3 prompts below. (200 words or less each) </p>
                             <%= f.input :short_answer1, required: false, as: :text, label: "1. What is your passion, and how does your passion drive you?" %>
                             <%= f.input :short_answer2, required: false, as: :text, label: "2. Identify one problem or inefficiency that can successfully be addressed by entrepreneurial action. Specify actionable items that can be applied to the situation. There is no need to constrain yourself to business-related industries — choose a topic in which you have authentic passion." %>
                             <%= f.input :short_answer3, required: false, as: :text, label: "3. Identify a startup that inspires you. Analyze their business model and target market." %>
-                            <%= f.input :short_answer4, required: false, as: :text, label: "4. If you had to create a startup in any country other than the United States, which would it be and why?" %>
                           </div>
                         </div>
                       </div>
