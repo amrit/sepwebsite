@@ -341,26 +341,66 @@
 	        </div>
 	    </div>
 	  </header>
-      <!-- Client logos -->
-      <div class="row-fluid">
+    <article>
+      <ul class="thumbnails plugin-filter-elements portfolio-items">
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="" data-destination="portfolio-items" data-insert="before">
+                            <!-- Portfolio image -->
+                            <%= image_tag("illuminating.jpg") %>
 
-          <div class="span2 center" style="margin-left: 26%;">
-              <%= link_to image_tag("caviar.png"), "http://www.trycaviar.com" %>
-          </div>
-
-          <!-- <div class="span2 center">
-              <h5> Meerkat </h5>
-          </div> -->
-
-          <div class="span2 center">
-              <%= link_to image_tag("freeventures.png"), "http://www.freeventures.org/" %>
-          </div>
-
-          <div class="span2 center">
-              <%= link_to image_tag("resolutiontube.png"), "http://www.resolutiontube.com/" %>
-          </div>
-      </div>
-
+                            <!-- Portfolio name, activated on hover -->
+                            <div class="portfolio-overlay">
+                              <h4>Illuminating Indian Lives</h4><br>
+                              <h3>Anant Agarwal</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="http://www.trycaviar.com" data-destination="portfolio-items" data-insert="before">
+                            <%= image_tag("caviar.jpg") %>
+                            <div class="portfolio-overlay">
+                              <h4>Caviar</h4><br>
+                              <h3>Andy Zhang</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="http://www.bayesimpact.org" data-destination="portfolio-items" data-insert="before">
+                            <%= image_tag("bayes.jpg") %>
+                            <div class="portfolio-overlay">
+                              <h4>Bayes Impact</h4><br>
+                              <h3>Eric Liu</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="http://www.freeventures.org" data-destination="portfolio-items" data-insert="before">
+                            <%= image_tag("freev.jpg") %>
+                            <div class="portfolio-overlay">
+                              <h4>Free Ventures</h4><br>
+                              <h3>Jasmine Stoy, Kirtan Upadhyaya</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="http://berkeleytechreview.com/" data-destination="portfolio-items" data-insert="before">
+                            <%= image_tag("btr.jpg") %>
+                            <div class="portfolio-overlay">
+                              <h4>Berkeley Technology Review</h4><br>
+                              <h3>Tom Yet, Lu Han</h3>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="span4 mix" style="display: inline-block; opacity: 1;">
+                        <a href="http://getcibo.com/" data-destination="portfolio-items" data-insert="before">
+                            <%= image_tag("cibo.jpg") %>
+                            <div class="portfolio-overlay">
+                              <h4>Cibo</h4><br>
+                              <h3>Anant Agarwal, Bianca Romulo</h3>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
   </div>
 </div>
 <!-- END PAGE | Endeavors -->
