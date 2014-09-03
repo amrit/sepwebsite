@@ -509,6 +509,10 @@
                         If you're interested in joining our ETA class, please fill out the application below.
                     </p>
 
+                    <p>
+                        <u>DISCLAIMER:</u> Mandatory meetings will be held weekly on Thursday and Tuesday evenings. We emphasize attendance as a key part of pledging; please note in advance that we expect you to commit to one of those two days.
+                    </p> </br>
+
                     <p> If you have any questions or concerns please contact <%= mail_to "bryantang@berkeley.edu", "Bryan Tang" %>. </p>
 
                     <p> <strong> Application due on Saturday, September 6th by 1:00am </strong> </p>
@@ -585,6 +589,7 @@
                           <div class="accordion-inner">
                             <%= f.input :picture, as: :file, label: "Please upload a picture of yourself, to help us identify you." %>
                             <%= f.input :resume, as: :file, label: "Please upload your updated resume." %>
+                            <%= f.input :availabilities, as: :check_boxes, label: "If you are selected for a personal interview, please select the times that you are available.", collection: [['Sat (9/6) Morning', 'Sat Morning'],['Sat (9/6) Early Afternoon', 'Sat Early Afternoon'],['Sat (9/6) Late Afternoon', 'Sat Late Afternoon'],['Sun (9/7) Morning', 'Sun Morning'],['Sun (9/7) Early Afternoon', 'Sun Early Afternoon'],['Sun (9/7) Late Afternoon', 'Sun Late Aftenoon']] %>
                             <%= f.input :reference, :as => :select, label: "How did you hear about us?" do
                                 f.select :reference, [['Classroom Announcement', 'classroom_announcement'], ['Flyer', 'flyer'], ['Table on Sproul', 'table'], ['Classroom Chalking', 'chalking'], ['Friend', 'friend'], ['Other', 'other']]
                             end %>

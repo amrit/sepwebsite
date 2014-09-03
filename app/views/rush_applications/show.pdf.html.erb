@@ -27,22 +27,28 @@
 
 <p> Short Answer </p>
 
-<ul> 
-	<% if @application.short_answer1.length > 0 %>
+<ul>
+	<% if @application.short_answer1 != nil %>
 		<li> <%= @application.short_answer1.gsub("\n","<br />").html_safe %> </li>
-	<% end %> 
-	<% if @application.short_answer2.length > 0 %>
+	<% end %>
+	<% if @application.short_answer2 != nil %>
 		<li> <%= @application.short_answer2.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
-	<% if @application.short_answer3.length > 0 %>
+	<% if @application.short_answer3 != nil %>
 		<li> <%= @application.short_answer3.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
-	<% if @application.short_answer4.length > 0 %>
+	<% if @application.short_answer4 != nil %>
 		<li> <%= @application.short_answer4.gsub("\n","<br />").html_safe %> </li>
 	<% end %>
 </ul>
 
 
+<p> Interview Availabilities </p>
+<ul>
+	<% @application.availabilities.each do |time| %>
+		<li> <%= time %> </li>
+  <% end %>
+</ul>
 
 
 
