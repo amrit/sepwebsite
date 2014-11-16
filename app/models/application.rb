@@ -5,16 +5,16 @@ class Application < ActiveRecord::Base
     :storage => :s3,
     :bucket => 'eta-application-pictures',
     :s3_credentials => {
-      :access_key_id => 'AKIAJ4OZKNCGDIJ6ZEAQ',
-      :secret_access_key => '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'
+      :access_key_id => 'AKIAJ6PWRRTSYZAT7EKQ',
+      :secret_access_key => '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'
    }
 
   has_attached_file :resume,
   	:storage => :s3,
     :bucket => 'eta-application-resumes',
     :s3_credentials => {
-      :access_key_id => 'AKIAJ4OZKNCGDIJ6ZEAQ',
-      :secret_access_key => '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'
+      :access_key_id => 'AKIAJ6PWRRTSYZAT7EKQ',
+      :secret_access_key => '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'
    }
 
 
